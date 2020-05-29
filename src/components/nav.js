@@ -33,8 +33,9 @@ const StyledListLink = styled(Link)`
 	color: ${colors.slateGray};
 	padding: 10px;
 	text-decoration: none;
+	transition: ${theme.transition};
 
-	&:hover: {
+	&:hover {
 		color: ${colors.lightGreen};
 	}
 `;
