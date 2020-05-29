@@ -20,7 +20,7 @@ const theme = {
 		lg: "18px",
 		xl: "20px",
 		xxl: "22px",
-		h3: "32px",
+		h1: "32px",
 	},
 
 	borderRadius: "3px",

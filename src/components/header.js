@@ -4,16 +4,21 @@ import React from "react";
 import styled from "styled-components";
 import { Nav } from "./";
 import { theme } from "../styles";
-const { colors } = theme;
+const { colors, fontSizes } = theme;
 
 const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 40px;
+	padding: 20px 40px;
 `;
 
+// const StyledName = styled.h1`
+// 	color: ${colors.lightGreen};
+// `;
+
 const StyledLink = styled(Link)`
+	font-size: ${fontSizes.h1};
 	color: ${colors.lightGreen};
 	text-decoration: none;
 `;
@@ -21,9 +26,7 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
 	<StyledHeader>
 		<div>
-			<h1>
-				<StyledLink to="/">{siteTitle}</StyledLink>
-			</h1>
+			<StyledLink to="/">{siteTitle}</StyledLink>
 		</div>
 		<Nav />
 	</StyledHeader>
