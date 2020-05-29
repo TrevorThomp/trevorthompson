@@ -30,7 +30,7 @@ const StyledListItem = styled.li`
 `;
 
 const StyledListLink = styled(Link)`
-	color: ${colors.slateGray};
+	color: #d3d3d3;
 	padding: 10px;
 	text-decoration: none;
 	transition: ${theme.transition};
@@ -41,6 +41,7 @@ const StyledListLink = styled(Link)`
 `;
 
 const StyledResumeButton = styled.button`
+	color: #d3d3d3;
 	padding: 5px 10px;
 	border: 1px solid ${colors.lightGreen};
 	font-size: ${fontSizes.sm};
