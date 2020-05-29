@@ -23,6 +23,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@upstatement/prettier-config": "^0.3.0",
     "prettier": "2.0.5"
   },
   "keywords": [
