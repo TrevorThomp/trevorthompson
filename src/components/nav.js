@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { navLinks } from "../config";
 import { theme } from "../styles";
 import { Link } from "gatsby";
-const { colors, fontSizes } = theme;
+const { colors, fontSizes, borderRadius } = theme;
 
 const StyledNav = styled.nav`
 	display: flex;
@@ -16,8 +16,7 @@ const StyledList = styled.ol`
 	align-items: center;
 	margin: 0;
 	list-style: none;
-	width: 300px;
-	font-size: ${fontSizes.md};
+	font-size: ${fontSizes.sm};
 `;
 
 const StyledListItem = styled.li`
@@ -31,8 +30,32 @@ const StyledListItem = styled.li`
 `;
 
 const StyledListLink = styled(Link)`
+	color: ${colors.slateGray};
 	padding: 10px;
 	text-decoration: none;
+
+	&:hover: {
+		color: ${colors.lightGreen};
+	}
+`;
+
+const StyledResumeButton = styled.button`
+	padding: 5px 10px;
+	border: 1px solid ${colors.lightGreen};
+	font-size: ${fontSizes.sm};
+	border-radius: ${borderRadius};
+	background-color: transparent;
+	transition: ${theme.transition};
+	outline: none;
+
+	&:hover {
+		cursor: pointer;
+		background-color: ${colors.fadedGreen};
+	}
+
+	&:after {
+		display: none !important;
+	}
 `;
 
 const Nav = () => {
@@ -46,6 +69,7 @@ const Nav = () => {
 						</StyledListItem>
 					))}
 			</StyledList>
+			<StyledResumeButton>Resume</StyledResumeButton>
 		</StyledNav>
 	);
 };
