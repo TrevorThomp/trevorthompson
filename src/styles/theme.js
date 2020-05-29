@@ -5,8 +5,8 @@ const theme = {
 		darkGreen: "#61892F",
 		lightGreen: "#86C232",
 		fadedGreen: hex2rgba("#86C232", 0.4),
-		black: "#222629",
-		slateGray: "#474B4F",
+		black: "#000000",
+		slateGray: "#414345",
 		lightGray: "#6B6E70",
 	},
 
