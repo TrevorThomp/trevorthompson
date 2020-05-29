@@ -13,10 +13,6 @@ const StyledHeader = styled.header`
 	padding: 20px 40px;
 `;
 
-// const StyledName = styled.h1`
-// 	color: ${colors.lightGreen};
-// `;
-
 const StyledLink = styled(Link)`
 	font-size: ${fontSizes.h1};
 	color: ${colors.lightGreen};
