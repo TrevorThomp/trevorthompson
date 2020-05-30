@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "../styles";
-const { colors, fontSizes } = theme;
+const { colors, fontSizes, hamburgerStyles } = theme;
 
 const StyledContent = styled.div`
 	color: white;
@@ -14,6 +14,10 @@ const StyledContent = styled.div`
 		${colors.slateGray} 100%
 	);
 	min-height: 100vh;
+
+	@media (max-width: 728px) {
+		width: 100%;
+	}
 `;
 
 import Header from "./header";

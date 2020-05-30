@@ -13,6 +13,10 @@ const StyledMain = styled.main`
 	min-height: 100vh;
 	padding-top: 200px;
 	padding-bottom: 200px;
+
+	@media (max-width: 728px) {
+		padding: 0 20px;
+	}
 `;
 
 const StyledSpan = styled.span`
@@ -21,12 +25,15 @@ const StyledSpan = styled.span`
 
 const StyledSection = styled.section`
 	width: 500px;
+
+	@media (max-width: 728px) {
+		width: 100%;
+	}
 `;
 
 const IndexPage = ({ data }) => {
 	const { hero } = data;
 	const { frontmatter } = hero.edges[0].node;
-	console.log(frontmatter);
 	return (
 		<Layout>
 			<StyledMain>
