@@ -5,16 +5,18 @@ const { colors, fontSizes, borderRadius } = theme;
 
 const StyledH2 = styled.h2`
 	color: ${colors.lightGreen};
+	font-size: ${fontSizes.h1};
 `;
 
-const StyledResumeButton = styled.button`
+const StyledEmailAnchor = styled.a`
 	color: #d3d3d3;
-	padding: 5px 10px;
+	padding: 10px 15px;
 	border: 1px solid ${colors.lightGreen};
 	font-size: ${fontSizes.sm};
 	border-radius: ${borderRadius};
 	background-color: transparent;
 	transition: ${theme.transition};
+	text-decoration: none;
 	outline: none;
 
 	&:hover {
@@ -36,7 +38,9 @@ const Hero = ({ name }) => {
 				I'm a software engineer based in Bend, OR specializing in building
 				exceptional websites and applications.
 			</p>
-			<StyledResumeButton>Let's Connect</StyledResumeButton>
+			<StyledEmailAnchor href="mailto:trevor.ray.thompson@gmail.com">
+				Let's Connect
+			</StyledEmailAnchor>
 		</section>
 	);
 };
