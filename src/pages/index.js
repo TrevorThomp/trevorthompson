@@ -28,11 +28,11 @@ const StyledSection = styled.section`
 	}
 `;
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ location, data }) => {
 	const { hero } = data;
 	const { frontmatter } = hero.edges[0].node;
 	return (
-		<Layout>
+		<Layout location={location}>
 			<StyledMain>
 				<Fade left delay={2000}>
 					<StyledSection>
