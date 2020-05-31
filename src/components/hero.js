@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 import { theme } from "../styles";
 const { colors, fontSizes, borderRadius } = theme;
 
@@ -31,17 +32,19 @@ const StyledEmailAnchor = styled.a`
 
 const Hero = ({ name }) => {
 	return (
-		<section>
-			<p>Hi, my name is</p>
-			<StyledH2>{name}</StyledH2>
-			<p>
-				I'm a software engineer based in Bend, OR specializing in building
-				exceptional websites and applications.
-			</p>
-			<StyledEmailAnchor href="mailto:trevor.ray.thompson@gmail.com">
-				Let's Connect
-			</StyledEmailAnchor>
-		</section>
+		<Fade delay={2000} left>
+			<section>
+				<p>Hi, my name is</p>
+				<StyledH2>{name}</StyledH2>
+				<p>
+					I'm a software engineer based in Bend, OR specializing in building
+					exceptional websites and applications.
+				</p>
+				<StyledEmailAnchor href="mailto:trevor.ray.thompson@gmail.com">
+					Let's Connect
+				</StyledEmailAnchor>
+			</section>
+		</Fade>
 	);
 };
 

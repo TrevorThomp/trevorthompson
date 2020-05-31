@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Nav } from "../index";
 import { theme } from "../../styles";
@@ -31,31 +32,33 @@ const StyledOuterContainer = styled.div`
 `;
 
 const Header = ({ siteTitle }) => (
-	<StyledHeader>
-		<div>
-			<StyledLink to="/">{siteTitle}</StyledLink>
-		</div>
-		<Nav />
-		<StyledOuterContainer>
-			<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
-				<a id="home" className="menu-item" href="/">
-					Home
-				</a>
-				<a id="about" className="menu-item" href="/about">
-					About
-				</a>
-				<a id="experience" className="menu-item" href="/contact">
-					Experience
-				</a>
-				<a className="menu-item--small" href="">
-					Work
-				</a>
-				<a id="contact" className="menu-item--small" href="">
-					Contact
-				</a>
-			</Menu>
-		</StyledOuterContainer>
-	</StyledHeader>
+	<Fade right duration={2000}>
+		<StyledHeader>
+			<div>
+				<StyledLink to="/">{siteTitle}</StyledLink>
+			</div>
+			<Nav />
+			<StyledOuterContainer>
+				<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
+					<a id="home" className="menu-item" href="/">
+						Home
+					</a>
+					<a id="about" className="menu-item" href="/about">
+						About
+					</a>
+					<a id="experience" className="menu-item" href="/contact">
+						Experience
+					</a>
+					<a className="menu-item--small" href="">
+						Work
+					</a>
+					<a id="contact" className="menu-item--small" href="">
+						Contact
+					</a>
+				</Menu>
+			</StyledOuterContainer>
+		</StyledHeader>
+	</Fade>
 );
 
 Header.propTypes = {

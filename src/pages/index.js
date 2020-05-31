@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { Layout, Hero } from "../components/";
@@ -33,9 +34,11 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<StyledMain>
-				<StyledSection>
-					<Hero name={frontmatter.name} />
-				</StyledSection>
+				<Fade left delay={2000}>
+					<StyledSection>
+						<Hero name={frontmatter.name} />
+					</StyledSection>
+				</Fade>
 			</StyledMain>
 		</Layout>
 	);
