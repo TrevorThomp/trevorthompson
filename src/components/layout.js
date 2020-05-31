@@ -4,15 +4,15 @@ import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "../styles";
 import { Header, Loader } from "./";
-const { colors } = theme;
+const { colors, secondColors } = theme;
 
 const StyledContent = styled.div`
 	color: white;
-	background-color: ${colors.black};
+	background-color: ${secondColors.blue};
 	background-image: linear-gradient(
 		315deg,
-		${colors.black} 5%,
-		${colors.slateGray} 100%
+		${secondColors.smokyBlack} 5%,
+		${secondColors.blue} 100%
 	);
 	min-height: 100vh;
 
@@ -55,14 +55,18 @@ const Layout = ({ location, children }) => {
 
 	return (
 		<div>
-			{isLoading && isHome ? (
+			{/* {isLoading && isHome ? (
 				<Loader />
 			) : (
 				<StyledContent>
 					<Header siteTitle={data.site.siteMetadata.title} />
 					<div id="content">{children}</div>
 				</StyledContent>
-			)}
+			)} */}
+			<StyledContent>
+				<Header siteTitle={data.site.siteMetadata.title} />
+				<div id="content">{children}</div>
+			</StyledContent>
 		</div>
 	);
 };

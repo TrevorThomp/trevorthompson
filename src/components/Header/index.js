@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Nav } from "../index";
 import { theme } from "../../styles";
-const { colors, fontSizes, hamburgerStyles } = theme;
+const { colors, fontSizes, hamburgerStyles, secondColors } = theme;
 import { stack as Menu } from "react-burger-menu";
 
 const StyledHeader = styled.header`
@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
 
 const StyledLink = styled(Link)`
 	font-size: ${fontSizes.h1};
-	color: ${colors.lightGreen};
+	color: ${secondColors.teal};
 	text-decoration: none;
 `;
 

@@ -7,7 +7,15 @@ const theme = {
 		fadedGreen: hex2rgba("#86C232", 0.4),
 		black: "#000000",
 		slateGray: "#414345",
-		lightGray: "#6B6E70",
+		lightGray: "#222629",
+	},
+
+	secondColors: {
+		teal: "#66FCF1",
+		greenTeal: "#45A29E",
+		slateWhite: "#C5C6C7",
+		smokyBlack: "#0B0C10",
+		blue: "#1F2833",
 	},
 
 	fonts: {},
