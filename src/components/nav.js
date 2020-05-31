@@ -7,7 +7,6 @@ const { colors, fontSizes, borderRadius } = theme;
 
 const StyledNav = styled.nav`
 	display: flex;
-	counter-reset: item 0;
 
 	@media (max-width: 728px) {
 		display: none;
@@ -27,8 +26,6 @@ const StyledListItem = styled.li`
 	margin: 0 10px;
 
 	&:before {
-		counter-increment: item 1;
-		content: "0" counter(item) ".";
 		color: ${colors.lightGreen};
 	}
 `;

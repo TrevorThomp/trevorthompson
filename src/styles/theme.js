@@ -26,8 +26,8 @@ const theme = {
 	hamburgerStyles: {
 		bmBurgerButton: {
 			position: "relative",
-			width: "36px",
-			height: "30px",
+			width: "30px",
+			height: "25px",
 		},
 		bmBurgerBars: {
 			background: "#86C232",
@@ -40,7 +40,7 @@ const theme = {
 			width: "24px",
 		},
 		bmCross: {
-			background: "#bdc3c7",
+			background: "#86C232",
 		},
 		bmMenuWrap: {
 			position: "fixed",

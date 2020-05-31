@@ -2,8 +2,8 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { Nav } from "./";
-import { theme } from "../styles";
+import { Nav } from "../index";
+import { theme } from "../../styles";
 const { colors, fontSizes, hamburgerStyles } = theme;
 import { stack as Menu } from "react-burger-menu";
 

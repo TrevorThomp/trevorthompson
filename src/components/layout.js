@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "../styles";
-const { colors, fontSizes, hamburgerStyles } = theme;
+import { Header } from "./";
+const { colors } = theme;
 
 const StyledContent = styled.div`
 	color: white;
@@ -20,7 +21,6 @@ const StyledContent = styled.div`
 	}
 `;
 
-import Header from "./header";
 import "./layout.css";
 
 const Layout = ({ children }) => {

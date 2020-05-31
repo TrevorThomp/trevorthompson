@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { Layout } from "../components";
+import { Layout, Hero } from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
 
@@ -19,10 +19,6 @@ const StyledMain = styled.main`
 	}
 `;
 
-const StyledSpan = styled.span`
-	color: ${colors.lightGreen};
-`;
-
 const StyledSection = styled.section`
 	width: 500px;
 
@@ -38,13 +34,7 @@ const IndexPage = ({ data }) => {
 		<Layout>
 			<StyledMain>
 				<StyledSection>
-					<h2>
-						Hi, my name is <StyledSpan>{frontmatter.name}</StyledSpan>
-					</h2>
-					<p>
-						I'm a software engineer based in Bend, OR specializing in building
-						exceptional websites and applications.
-					</p>
+					<Hero name={frontmatter.name} />
 				</StyledSection>
 			</StyledMain>
 		</Layout>
