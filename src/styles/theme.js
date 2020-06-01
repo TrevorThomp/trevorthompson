@@ -18,7 +18,10 @@ const theme = {
 		blue: "#1F2833",
 	},
 
-	fonts: {},
+	font: {
+		Kaushan: "Kaushan",
+		DancingScript: "Dancing Script",
+	},
 
 	fontSizes: {
 		xs: "12px",
@@ -29,6 +32,7 @@ const theme = {
 		xl: "20px",
 		xxl: "22px",
 		h1: "32px",
+		title: "80px",
 	},
 
 	hamburgerStyles: {

@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Nav } from "../index";
 import { theme } from "../../styles";
-const { colors, fontSizes, hamburgerStyles, secondColors } = theme;
+const { colors, fontSizes, hamburgerStyles, secondColors, font } = theme;
 import { stack as Menu } from "react-burger-menu";
 
 const StyledHeader = styled.header`
@@ -13,6 +13,7 @@ const StyledHeader = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 40px;
+	height: 100px;
 
 	@media (max-width: 728px) {
 		padding: 20px;

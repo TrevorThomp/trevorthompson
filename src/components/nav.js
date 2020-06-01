@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { navLinks } from "../config";
 import { theme } from "../styles";
 import { Link } from "gatsby";
-const { colors, fontSizes, borderRadius, secondColors } = theme;
+const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledNav = styled.nav`
 	display: flex;

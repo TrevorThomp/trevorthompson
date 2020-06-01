@@ -7,12 +7,12 @@ import { theme } from "../styles";
 const { colors, fontSizes } = theme;
 
 const StyledMain = styled.main`
-	padding: 0 150px;
+	padding: 0 250px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1600px;
 	min-height: 100vh;
-	padding-top: 200px;
+	padding-top: 75px;
 	padding-bottom: 200px;
 
 	@media (max-width: 728px) {
@@ -21,7 +21,7 @@ const StyledMain = styled.main`
 `;
 
 const StyledSection = styled.section`
-	width: 500px;
+	width: 700px;
 
 	@media (max-width: 728px) {
 		width: 100%;
