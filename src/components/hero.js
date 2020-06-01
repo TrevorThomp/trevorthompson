@@ -51,20 +51,24 @@ const StyledText = styled.p`
 	}
 `;
 
-const Hero = ({ name }) => {
+const StyledContainer = styled.section`
+	height: 100vh;
+`;
+
+const Hero = ({ data }) => {
+	const { title, name, description } = data[0].node.frontmatter;
+	const { html } = data[0].node;
+	console.log(data);
 	return (
 		<Fade delay={2000} duration={2000} left>
-			<section>
-				<StyledP>Hi, my name is</StyledP>
+			<StyledContainer>
+				<StyledP>{title}</StyledP>
 				<StyledH2>{name}</StyledH2>
-				<StyledText>
-					I'm a software engineer based in Bend, OR specializing in building
-					exceptional websites and applications.
-				</StyledText>
+				<StyledText>{description}</StyledText>
 				<StyledResumeButton href="mailto:trevor.ray.thompson@gmail.com">
 					Let's Connect
 				</StyledResumeButton>
-			</section>
+			</StyledContainer>
 		</Fade>
 	);
 };

@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { navLinks } from "../config";
 import { theme } from "../styles";
+// import { Link } from "react-scroll";
 import { Link } from "gatsby";
+// import scrollTo from "gatsby-plugin-smoothscroll";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledNav = styled.nav`
@@ -27,13 +30,14 @@ const StyledListItem = styled.li`
 	margin: 0 10px;
 `;
 
-const StyledListLink = styled(Link)`
+const StyledListLink = styled(AnchorLink)`
 	color: #d3d3d3;
 	padding: 10px;
 	text-decoration: none;
 	transition: ${theme.transition};
 
 	&:hover {
+		cursor: pointer;
 		color: ${secondColors.teal};
 	}
 `;
@@ -58,7 +62,8 @@ const StyledResumeButton = styled.button`
 	}
 `;
 
-const Nav = () => {
+const Nav = ({}) => {
+	console.log(navLinks);
 	return (
 		<StyledNav>
 			<StyledList>

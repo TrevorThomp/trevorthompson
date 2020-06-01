@@ -5,6 +5,7 @@ module.exports = {
 		author: "Trevor",
 	},
 	plugins: [
+		`gatsby-plugin-smoothscroll`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-styled-components`,
@@ -13,6 +14,12 @@ module.exports = {
 			options: {
 				name: `images`,
 				path: `${__dirname}/content/`,
+			},
+		},
+		{
+			resolve: "gatsby-plugin-anchor-links",
+			options: {
+				offset: -90,
 			},
 		},
 		`gatsby-transformer-remark`,

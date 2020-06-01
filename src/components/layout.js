@@ -24,25 +24,6 @@ const StyledContent = styled.div`
 import "./layout.css";
 
 const Layout = ({ location, children }) => {
-	const isHome = location.pathname === "/";
-	const [isLoading, setIsLoading] = useState(isHome);
-
-	useEffect(() => {
-		if (isLoading) {
-			return;
-		}
-		if (location.hash) {
-			const id = location.hash.substring(1);
-			setTimeout(() => {
-				const el = document.getElementById(id);
-				if (el) {
-					el.scrollIntoView();
-					el.focus();
-				}
-			}, 0);
-		}
-	}, [isLoading]);
-
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {

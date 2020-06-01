@@ -2,7 +2,7 @@ import React from "react";
 import Fade from "react-reveal";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { Layout, Hero } from "../components/";
+import { Layout, Hero, About, Header } from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
 
@@ -30,16 +30,14 @@ const StyledSection = styled.section`
 `;
 
 const IndexPage = ({ location, data }) => {
-	const { hero } = data;
-	const { frontmatter } = hero.edges[0].node;
+	const { hero, about } = data;
 	return (
-		<Layout location={location}>
+		<Layout>
 			<StyledMain>
-				<Fade>
-					<StyledSection>
-						<Hero name={frontmatter.name} />
-					</StyledSection>
-				</Fade>
+				<StyledSection>
+					<Hero data={hero.edges} />
+					<About data={about.edges} />
+				</StyledSection>
 			</StyledMain>
 		</Layout>
 	);
@@ -55,6 +53,22 @@ export const pageQuery = graphql`
 					frontmatter {
 						title
 						name
+						description
+					}
+					html
+				}
+			}
+		}
+
+		about: allMarkdownRemark(
+			filter: { fileAbsolutePath: { regex: "/about/" } }
+		) {
+			edges {
+				node {
+					frontmatter {
+						title
+						paragraphOne
+						paragraphTwo
 					}
 					html
 				}
