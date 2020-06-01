@@ -17,11 +17,17 @@ const StyledMain = styled.main`
 
 	@media (max-width: 728px) {
 		padding: 0 20px;
+		padding-top: 100px;
 	}
 `;
 
 const StyledSection = styled.section`
 	width: 700px;
+
+	.react-reveal {
+		position: relative;
+		z-index: -1;
+	}
 
 	@media (max-width: 728px) {
 		width: 100%;
@@ -34,7 +40,7 @@ const IndexPage = ({ location, data }) => {
 	return (
 		<Layout location={location}>
 			<StyledMain>
-				<Fade left delay={2000}>
+				<Fade>
 					<StyledSection>
 						<Hero name={frontmatter.name} />
 					</StyledSection>

@@ -5,8 +5,8 @@ import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Nav } from "../index";
 import { theme } from "../../styles";
-const { colors, fontSizes, hamburgerStyles, secondColors, font } = theme;
-import { stack as Menu } from "react-burger-menu";
+const { fontSizes, hamburgerStyles, secondColors, borderRadius } = theme;
+import { slide as Menu } from "react-burger-menu";
 
 const StyledHeader = styled.header`
 	display: flex;
@@ -27,6 +27,13 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledOuterContainer = styled.div`
+	.bm-burger-bars:nth-of-type(2) {
+		width: 20px;
+	}
+
+	.bm-burger-bars:nth-of-type(3) {
+		width: 10px;
+	}
 	@media (min-width: 728px) {
 		display: none;
 	}

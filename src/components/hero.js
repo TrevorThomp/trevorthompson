@@ -53,7 +53,7 @@ const StyledText = styled.p`
 
 const Hero = ({ name }) => {
 	return (
-		<Fade delay={2000} left>
+		<Fade delay={2000} duration={2000} left>
 			<section>
 				<StyledP>Hi, my name is</StyledP>
 				<StyledH2>{name}</StyledH2>

@@ -50,37 +50,47 @@ const theme = {
 		bmCrossButton: {
 			height: "24px",
 			width: "24px",
+			top: "15px",
+			right: "15px",
 		},
 		bmCross: {
 			background: "#66FCF1",
+			height: "20px",
 		},
 		bmMenuWrap: {
 			position: "fixed",
 			top: "0",
-			height: "100%",
+			height: "30%",
 		},
 		bmMenu: {
-			background: "#373a47",
-			padding: "2.5em 1.5em 0",
+			display: "flex",
+			justifyContent: "center",
+			alignItems: "center",
+			background: "#1F2833",
+			padding: "1.5em 1.5em 0",
 			fontSize: "1.15em",
+			zIndex: "99",
+			borderRadius: "5px",
 		},
 		bmMorphShape: {
-			fill: "#373a47",
+			fill: "#1F2833",
 		},
 		bmItemList: {
 			display: "flex",
 			flexDirection: "column",
 			color: "red",
 			padding: "0.8em",
+			paddingLeft: "2em",
 		},
 		bmItem: {
-			color: "#66FCF1",
+			color: "#45A29E",
 			display: "inline-block",
 			textDecoration: "none",
 			outline: "none",
+			marginBottom: "10px",
 		},
 		bmOverlay: {
-			background: "rgba(0, 0, 0, 0.3)",
+			background: "transparent",
 		},
 	},
 
