@@ -2,7 +2,7 @@ import React from "react";
 import Fade from "react-reveal";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { Layout, Hero } from "../components/";
+import { Layout, Hero, About, Experience, Projects } from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
 
@@ -24,27 +24,22 @@ const StyledMain = styled.main`
 const StyledSection = styled.section`
 	width: 700px;
 
-	.react-reveal {
-		position: relative;
-		z-index: -1;
-	}
-
 	@media (max-width: 728px) {
 		width: 100%;
 	}
 `;
 
 const IndexPage = ({ location, data }) => {
-	const { hero } = data;
-	const { frontmatter } = hero.edges[0].node;
+	const { hero, about, experience, projects } = data;
 	return (
-		<Layout location={location}>
+		<Layout>
 			<StyledMain>
-				<Fade>
-					<StyledSection>
-						<Hero name={frontmatter.name} />
-					</StyledSection>
-				</Fade>
+				<StyledSection>
+					<Hero data={hero.edges} />
+					<About data={about.edges} />
+					<Experience data={experience.edges} />
+					<Projects data={projects.edges} />
+				</StyledSection>
 			</StyledMain>
 		</Layout>
 	);
@@ -60,6 +55,52 @@ export const pageQuery = graphql`
 					frontmatter {
 						title
 						name
+						description
+					}
+					html
+				}
+			}
+		}
+
+		about: allMarkdownRemark(
+			filter: { fileAbsolutePath: { regex: "/about/" } }
+		) {
+			edges {
+				node {
+					frontmatter {
+						title
+						paragraphOne
+						paragraphTwo
+					}
+					html
+				}
+			}
+		}
+
+		experience: allMarkdownRemark(
+			filter: { fileAbsolutePath: { regex: "/experience/" } }
+		) {
+			edges {
+				node {
+					frontmatter {
+						title
+						paragraphOne
+						paragraphTwo
+					}
+					html
+				}
+			}
+		}
+
+		projects: allMarkdownRemark(
+			filter: { fileAbsolutePath: { regex: "/projects/" } }
+		) {
+			edges {
+				node {
+					frontmatter {
+						title
+						paragraphOne
+						paragraphTwo
 					}
 					html
 				}

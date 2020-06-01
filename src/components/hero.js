@@ -19,16 +19,16 @@ const StyledP = styled.p`
 	margin-bottom: 15px;
 `;
 
-const StyledEmailAnchor = styled.a`
+const StyledResumeButton = styled.a`
 	color: #d3d3d3;
-	padding: 20px 25px;
+	padding: 15px 20px;
 	border: 1px solid ${secondColors.teal};
-	font-size: ${fontSizes.md};
+	font-size: ${fontSizes.sm};
 	border-radius: ${borderRadius};
 	background-color: transparent;
 	transition: ${theme.transition};
-	text-decoration: none;
 	outline: none;
+	text-decoration: none;
 
 	&:hover {
 		cursor: pointer;
@@ -51,20 +51,24 @@ const StyledText = styled.p`
 	}
 `;
 
-const Hero = ({ name }) => {
+const StyledContainer = styled.section`
+	height: 90vh;
+`;
+
+const Hero = ({ data }) => {
+	const { title, name, description } = data[0].node.frontmatter;
+	const { html } = data[0].node;
+	console.log(data);
 	return (
 		<Fade delay={2000} duration={2000} left>
-			<section>
-				<StyledP>Hi, my name is</StyledP>
+			<StyledContainer>
+				<StyledP>{title}</StyledP>
 				<StyledH2>{name}</StyledH2>
-				<StyledText>
-					I'm a software engineer based in Bend, OR specializing in building
-					exceptional websites and applications.
-				</StyledText>
-				<StyledEmailAnchor href="mailto:trevor.ray.thompson@gmail.com">
+				<StyledText>{description}</StyledText>
+				<StyledResumeButton href="mailto:trevor.ray.thompson@gmail.com">
 					Let's Connect
-				</StyledEmailAnchor>
-			</section>
+				</StyledResumeButton>
+			</StyledContainer>
 		</Fade>
 	);
 };

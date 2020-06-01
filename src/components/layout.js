@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "../styles";
-import { Header, Loader } from "./";
+import { Header } from "./";
 const { colors, secondColors } = theme;
 
 const StyledContent = styled.div`
@@ -24,25 +24,6 @@ const StyledContent = styled.div`
 import "./layout.css";
 
 const Layout = ({ location, children }) => {
-	const isHome = location.pathname === "/";
-	const [isLoading, setIsLoading] = useState(isHome);
-
-	useEffect(() => {
-		if (isLoading) {
-			return;
-		}
-		if (location.hash) {
-			const id = location.hash.substring(1);
-			setTimeout(() => {
-				const el = document.getElementById(id);
-				if (el) {
-					el.scrollIntoView();
-					el.focus();
-				}
-			}, 0);
-		}
-	}, [isLoading]);
-
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -55,14 +36,6 @@ const Layout = ({ location, children }) => {
 
 	return (
 		<div>
-			{/* {isLoading && isHome ? (
-				<Loader />
-			) : (
-				<StyledContent>
-					<Header siteTitle={data.site.siteMetadata.title} />
-					<div id="content">{children}</div>
-				</StyledContent>
-			)} */}
 			<StyledContent>
 				<Header siteTitle={data.site.siteMetadata.title} />
 				<div id="content">{children}</div>
