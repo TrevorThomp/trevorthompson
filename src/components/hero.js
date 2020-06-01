@@ -52,7 +52,7 @@ const StyledText = styled.p`
 `;
 
 const StyledContainer = styled.section`
-	height: 100vh;
+	height: 90vh;
 `;
 
 const Hero = ({ data }) => {
