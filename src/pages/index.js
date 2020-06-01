@@ -24,11 +24,6 @@ const StyledMain = styled.main`
 const StyledSection = styled.section`
 	width: 700px;
 
-	.react-reveal {
-		position: relative;
-		z-index: -1;
-	}
-
 	@media (max-width: 728px) {
 		width: 100%;
 	}

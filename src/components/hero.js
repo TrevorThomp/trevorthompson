@@ -19,16 +19,16 @@ const StyledP = styled.p`
 	margin-bottom: 15px;
 `;
 
-const StyledEmailAnchor = styled.a`
+const StyledResumeButton = styled.a`
 	color: #d3d3d3;
-	padding: 20px 25px;
+	padding: 15px 20px;
 	border: 1px solid ${secondColors.teal};
-	font-size: ${fontSizes.md};
+	font-size: ${fontSizes.sm};
 	border-radius: ${borderRadius};
 	background-color: transparent;
 	transition: ${theme.transition};
-	text-decoration: none;
 	outline: none;
+	text-decoration: none;
 
 	&:hover {
 		cursor: pointer;
@@ -61,9 +61,9 @@ const Hero = ({ name }) => {
 					I'm a software engineer based in Bend, OR specializing in building
 					exceptional websites and applications.
 				</StyledText>
-				<StyledEmailAnchor href="mailto:trevor.ray.thompson@gmail.com">
+				<StyledResumeButton href="mailto:trevor.ray.thompson@gmail.com">
 					Let's Connect
-				</StyledEmailAnchor>
+				</StyledResumeButton>
 			</section>
 		</Fade>
 	);

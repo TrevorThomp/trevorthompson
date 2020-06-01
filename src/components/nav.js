@@ -68,8 +68,8 @@ const Nav = () => {
 							<StyledListLink to={url}>{name}</StyledListLink>
 						</StyledListItem>
 					))}
+				<StyledResumeButton>Resume</StyledResumeButton>
 			</StyledList>
-			<StyledResumeButton>Resume</StyledResumeButton>
 		</StyledNav>
 	);
 };

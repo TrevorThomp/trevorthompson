@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "../styles";
-import { Header, Loader } from "./";
+import { Header } from "./";
 const { colors, secondColors } = theme;
 
 const StyledContent = styled.div`
@@ -55,14 +55,6 @@ const Layout = ({ location, children }) => {
 
 	return (
 		<div>
-			{/* {isLoading && isHome ? (
-				<Loader />
-			) : (
-				<StyledContent>
-					<Header siteTitle={data.site.siteMetadata.title} />
-					<div id="content">{children}</div>
-				</StyledContent>
-			)} */}
 			<StyledContent>
 				<Header siteTitle={data.site.siteMetadata.title} />
 				<div id="content">{children}</div>
