@@ -42,7 +42,7 @@ const theme = {
 			height: "25px",
 		},
 		bmBurgerBars: {
-			background: "#86C232",
+			background: "#66FCF1",
 		},
 		bmBurgerBarsHover: {
 			background: "#a90000",
@@ -52,7 +52,7 @@ const theme = {
 			width: "24px",
 		},
 		bmCross: {
-			background: "#86C232",
+			background: "#66FCF1",
 		},
 		bmMenuWrap: {
 			position: "fixed",
@@ -74,7 +74,7 @@ const theme = {
 			padding: "0.8em",
 		},
 		bmItem: {
-			color: "#86C232",
+			color: "#66FCF1",
 			display: "inline-block",
 			textDecoration: "none",
 			outline: "none",

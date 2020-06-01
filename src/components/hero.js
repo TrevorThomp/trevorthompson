@@ -7,6 +7,10 @@ const { colors, fontSizes, borderRadius, secondColors } = theme;
 const StyledH2 = styled.h2`
 	color: ${secondColors.slateWhite};
 	font-size: ${fontSizes.title};
+
+	@media (max-width: 728px) {
+		font-size: ${fontSizes.h1};
+	}
 `;
 
 const StyledP = styled.p`
@@ -41,6 +45,10 @@ const StyledText = styled.p`
 	color: ${secondColors.slateWhite};
 	width: 500px;
 	margin-bottom: 50px;
+
+	@media (max-width: 728px) {
+		width: 100%;
+	}
 `;
 
 const Hero = ({ name }) => {
