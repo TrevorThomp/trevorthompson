@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { navLinks } from "../config";
 import { theme } from "../styles";
-// import { Link } from "react-scroll";
-import { Link } from "gatsby";
+import { Link } from "react-scroll";
+import scrollToElement from "scroll-to-element";
+// import { Link } from "gatsby";
 // import scrollTo from "gatsby-plugin-smoothscroll";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import { AnchorLink } from "gatsby-plugin-anchor-links";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledNav = styled.nav`
@@ -30,7 +31,7 @@ const StyledListItem = styled.li`
 	margin: 0 10px;
 `;
 
-const StyledListLink = styled(AnchorLink)`
+const StyledListLink = styled(Link)`
 	color: #d3d3d3;
 	padding: 10px;
 	text-decoration: none;
@@ -63,7 +64,16 @@ const StyledResumeButton = styled.button`
 `;
 
 const Nav = ({}) => {
-	console.log(navLinks);
+	function scroller(target, offset) {
+		console.log(target);
+		scrollToElement(target, {
+			offset,
+			ease: "out-quad",
+			align: "top",
+			duration: 5000,
+		});
+	}
+
 	return (
 		<StyledNav>
 			<StyledList>

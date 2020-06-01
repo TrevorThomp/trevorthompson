@@ -5,7 +5,7 @@ import { theme } from "../styles";
 const { colors, fontSizes, borderRadius, secondColors } = theme;
 
 const StyledProjectsWrapper = styled.div`
-	height: 100vh;
+	height: 50vh;
 `;
 
 const Projects = ({ data }) => {

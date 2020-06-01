@@ -5,7 +5,7 @@ import { theme } from "../styles";
 const { colors, fontSizes, borderRadius, secondColors } = theme;
 
 const StyledExperienceWrapper = styled.div`
-	height: 100vh;
+	height: 70vh;
 `;
 
 const Experience = ({ data }) => {
