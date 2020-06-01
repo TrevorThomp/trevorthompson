@@ -2,7 +2,15 @@ import React from "react";
 import Fade from "react-reveal";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { Layout, Hero, About, Experience, Projects } from "../components/";
+import {
+	Layout,
+	Hero,
+	About,
+	Experience,
+	Projects,
+	Nav,
+	Header,
+} from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
 
