@@ -16,11 +16,6 @@ const StyledContent = styled.div`
 	);
 	min-height: 100vh;
 
-	.react-reveal {
-		position: relative;
-		z-index: 1;
-	}
-
 	.headroom--pinned {
 		position: relative;
 		z-index: 2;

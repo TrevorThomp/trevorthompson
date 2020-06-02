@@ -20,7 +20,7 @@ const StyledMain = styled.main`
 	width: 100%;
 	max-width: 1600px;
 	min-height: 100vh;
-	padding-top: 75px;
+	padding-top: 175px;
 	padding-bottom: 200px;
 
 	@media (max-width: 728px) {
