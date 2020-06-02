@@ -79,6 +79,9 @@ export const pageQuery = graphql`
 						title
 						paragraphOne
 						paragraphTwo
+						languageTitle
+						frontEnd
+						backEnd
 					}
 					html
 				}
