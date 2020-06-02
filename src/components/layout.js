@@ -17,7 +17,6 @@ const StyledContent = styled.div`
 	min-height: 100vh;
 
 	.headroom--pinned {
-		// box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
 		box-shadow: 0px 15px 10px -15px #111;
 		background-color: rgb(31, 40, 51);
 		background-image: linear-gradient(
