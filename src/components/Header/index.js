@@ -23,6 +23,7 @@ const StyledHeader = styled.header`
 	z-index: 99;
 
 	@media (max-width: 728px) {
+		position: relative;
 		padding: 20px;
 	}
 `;
@@ -59,7 +60,10 @@ const StyledScrolledHeader = styled.div`
 	transition: width 0.5s ease;
 	z-index: -1;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-	width: ${(props) => (props.triggered ? "100%" : "0%")};
+
+	@media (min-width: 728px) {
+		width: ${(props) => (props.triggered ? "100%" : "0%")};
+	}
 `;
 
 const Header = ({ siteTitle }) => {

@@ -62,7 +62,7 @@ const theme = {
 		bmMenuWrap: {
 			position: "fixed",
 			top: "0",
-			height: "30%",
+			height: "100%",
 		},
 		bmMenu: {
 			display: "flex",
@@ -83,13 +83,14 @@ const theme = {
 			color: "red",
 			padding: "0.8em",
 			paddingLeft: "2em",
+			marginTop: "100px",
 		},
 		bmItem: {
-			color: "#45A29E",
+			color: "#66FCF1",
 			display: "inline-block",
 			textDecoration: "none",
 			outline: "none",
-			marginBottom: "10px",
+			marginBottom: "40px",
 		},
 		bmOverlay: {
 			background: "transparent",
