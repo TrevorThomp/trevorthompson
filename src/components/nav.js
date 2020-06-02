@@ -73,7 +73,7 @@ const Nav = ({ navLinks }) => {
 								to={url}
 								spy={true}
 								smooth={true}
-								offset={-70}
+								offset={-120}
 								duration={1000}
 							>
 								{name}
