@@ -16,8 +16,29 @@ const StyledContent = styled.div`
 	);
 	min-height: 100vh;
 
+	.react-reveal {
+		position: relative;
+		z-index: 1;
+	}
+
+	.headroom--pinned {
+		position: relative;
+		z-index: 2;
+		box-shadow: 0px 15px 10px -15px #111;
+		background-color: rgb(31, 40, 51);
+		background-image: linear-gradient(
+			315deg,
+			rgb(11, 12, 16) 5%,
+			rgb(31, 40, 51) 100%
+		);
+	}
+
 	@media (max-width: 728px) {
 		width: 100%;
+
+		.headroom {
+			z-index: -1;
+		}
 	}
 `;
 

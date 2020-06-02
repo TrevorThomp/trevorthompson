@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { navLinks } from "../config";
 import { theme } from "../styles";
-import { Link } from "react-scroll";
-import scrollToElement from "scroll-to-element";
+import { Link, animateScroll as scroll } from "react-scroll";
 // import { Link } from "gatsby";
 // import scrollTo from "gatsby-plugin-smoothscroll";
 // import { AnchorLink } from "gatsby-plugin-anchor-links";
@@ -63,24 +61,23 @@ const StyledResumeButton = styled.button`
 	}
 `;
 
-const Nav = ({}) => {
-	function scroller(target, offset) {
-		console.log(target);
-		scrollToElement(target, {
-			offset,
-			ease: "out-quad",
-			align: "top",
-			duration: 5000,
-		});
-	}
-
+const Nav = ({ navLinks }) => {
 	return (
 		<StyledNav>
 			<StyledList>
 				{navLinks &&
 					navLinks.map(({ name, url }, i) => (
 						<StyledListItem key={i}>
-							<StyledListLink to={url}>{name}</StyledListLink>
+							<StyledListLink
+								activeClass="active"
+								to={url}
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={1000}
+							>
+								{name}
+							</StyledListLink>
 						</StyledListItem>
 					))}
 				<StyledResumeButton>Resume</StyledResumeButton>
