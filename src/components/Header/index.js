@@ -15,10 +15,8 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
 	padding: 20px 40px;
 	height: 100px;
-	z-index: 95;
 
 	@media (max-width: 728px) {
 		padding: 20px;
@@ -54,48 +52,48 @@ const Header = ({ siteTitle }) => {
 	}
 	return (
 		<Fade right duration={2000}>
-			<Headroom>
-				<StyledHeader>
-					<div>
-						<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
-					</div>
-					<Nav navLinks={navLinks} />
-					<StyledOuterContainer>
-						<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
-							{navLinks &&
-								navLinks.map(({ name, url }, i) => (
-									<Link
-										className="menu-item"
-										to={url}
-										activeClass="active"
-										to={url}
-										spy={true}
-										smooth={true}
-										offset={-70}
-										duration={500}
-									>
-										{name}
-									</Link>
-								))}
-							{/* <a className="menu-item" href="/">
-						Home
-					</a>
-					<a className="menu-item" href="/about">
-						About
-					</a>
-					<a className="menu-item" href="/contact">
-						Experience
-					</a>
-					<a className="menu-item--small" href="">
-						Work
-					</a>
-					<a className="menu-item--small" href="">
-						Contact
-					</a> */}
-						</Menu>
-					</StyledOuterContainer>
-				</StyledHeader>
-			</Headroom>
+			{/* <Headroom> */}
+			<StyledHeader>
+				<div>
+					<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
+				</div>
+				<Nav navLinks={navLinks} />
+				<StyledOuterContainer>
+					<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
+						{navLinks &&
+							navLinks.map(({ name, url }, i) => (
+								<Link
+									className="menu-item"
+									to={url}
+									activeClass="active"
+									to={url}
+									spy={true}
+									smooth={true}
+									offset={-70}
+									duration={500}
+								>
+									{name}
+								</Link>
+							))}
+						{/* <a className="menu-item" href="/">
+							Home
+						</a>
+						<a className="menu-item" href="/about">
+							About
+						</a>
+						<a className="menu-item" href="/contact">
+							Experience
+						</a>
+						<a className="menu-item--small" href="">
+							Work
+						</a>
+						<a className="menu-item--small" href="">
+							Contact
+						</a> */}
+					</Menu>
+				</StyledOuterContainer>
+			</StyledHeader>
+			{/* </Headroom> */}
 		</Fade>
 	);
 };
