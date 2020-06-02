@@ -15,8 +15,10 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 	padding: 20px 40px;
 	height: 100px;
+	z-index: 95;
 
 	@media (max-width: 728px) {
 		padding: 20px;

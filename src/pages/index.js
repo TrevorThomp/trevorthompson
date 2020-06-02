@@ -15,6 +15,7 @@ import { theme } from "../styles";
 const { colors, fontSizes } = theme;
 
 const StyledMain = styled.main`
+	// position: relative;
 	padding: 0 250px;
 	margin: 0 auto;
 	width: 100%;
@@ -22,6 +23,7 @@ const StyledMain = styled.main`
 	min-height: 100vh;
 	padding-top: 75px;
 	padding-bottom: 200px;
+	// z-index: 2;
 
 	@media (max-width: 728px) {
 		padding: 0 20px;
