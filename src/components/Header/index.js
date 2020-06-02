@@ -8,12 +8,13 @@ import { navLinks } from "../../config";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { theme } from "../../styles";
 import { useScrollYPosition } from "react-use-scroll-position";
-const { fontSizes, hamburgerStyles, secondColors, borderRadius } = theme;
+const { fontSizes, hamburgerStyles, secondColors, font } = theme;
 import { slide as Menu } from "react-burger-menu";
 
 const StyledHeader = styled.header`
 	position: fixed;
 	width: 100%;
+	font-family: ${font.roboto};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -49,7 +50,7 @@ const StyledOuterContainer = styled.div`
 	}
 `;
 
-const HeaderScrolledMask = styled.div`
+const StyledScrolledHeader = styled.div`
 	background: ${secondColors.blue};
 	position: absolute;
 	top: 0;
@@ -70,7 +71,7 @@ const Header = ({ siteTitle }) => {
 	}
 	return (
 		<StyledHeader>
-			<HeaderScrolledMask triggered={scrolled} />
+			<StyledScrolledHeader triggered={scrolled} />
 			<Fade right duration={2000} style={{ zIndex: 99 }}>
 				<div>
 					<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
@@ -79,23 +80,25 @@ const Header = ({ siteTitle }) => {
 				<Nav navLinks={navLinks} />
 			</Fade>
 			<StyledOuterContainer>
-				<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
-					{navLinks &&
-						navLinks.map(({ name, url }, i) => (
-							<Link
-								className="menu-item"
-								to={url}
-								activeClass="active"
-								to={url}
-								spy={true}
-								smooth={true}
-								offset={-70}
-								duration={500}
-							>
-								{name}
-							</Link>
-						))}
-				</Menu>
+				<Fade right duration={2000} style={{ zIndex: 99 }}>
+					<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
+						{navLinks &&
+							navLinks.map(({ name, url }, i) => (
+								<Link
+									className="menu-item"
+									to={url}
+									activeClass="active"
+									to={url}
+									spy={true}
+									smooth={true}
+									offset={-70}
+									duration={500}
+								>
+									{name}
+								</Link>
+							))}
+					</Menu>
+				</Fade>
 			</StyledOuterContainer>
 		</StyledHeader>
 	);

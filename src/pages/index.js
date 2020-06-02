@@ -25,7 +25,7 @@ const StyledMain = styled.main`
 
 	@media (max-width: 728px) {
 		padding: 0 20px;
-		padding-top: 100px;
+		padding-top: 175px;
 	}
 `;
 

@@ -13,14 +13,15 @@ const theme = {
 	secondColors: {
 		teal: "#66FCF1",
 		greenTeal: "#45A29E",
+		fadedTeal: "#A7E2E0",
 		slateWhite: "#C5C6C7",
 		smokyBlack: "#0B0C10",
 		blue: "#1F2833",
 	},
 
 	font: {
-		Kaushan: "Kaushan",
-		DancingScript: "Dancing Script",
+		roboto: `'Roboto Mono', monospace`,
+		exo2: `'Exo 2', sans-serif`,
 	},
 
 	fontSizes: {
@@ -32,6 +33,7 @@ const theme = {
 		xl: "20px",
 		xxl: "22px",
 		h1: "32px",
+		smTitle: "60px",
 		title: "80px",
 	},
 
