@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../styles";
 import { Link, animateScroll as scroll } from "react-scroll";
-// import { Link } from "gatsby";
-// import scrollTo from "gatsby-plugin-smoothscroll";
-// import { AnchorLink } from "gatsby-plugin-anchor-links";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledNav = styled.nav`
@@ -73,7 +70,7 @@ const Nav = ({ navLinks }) => {
 								to={url}
 								spy={true}
 								smooth={true}
-								offset={-70}
+								offset={-150}
 								duration={1000}
 							>
 								{name}
