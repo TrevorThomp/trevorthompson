@@ -7,16 +7,20 @@ import { Nav } from "../index";
 import { navLinks } from "../../config";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { theme } from "../../styles";
-import Headroom from "react-headroom";
-const { fontSizes, hamburgerStyles, secondColors, borderRadius } = theme;
+import { useScrollYPosition } from "react-use-scroll-position";
+const { fontSizes, hamburgerStyles, secondColors, font } = theme;
 import { slide as Menu } from "react-burger-menu";
 
 const StyledHeader = styled.header`
+	position: fixed;
+	width: 100%;
+	font-family: ${font.roboto};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 40px;
 	height: 100px;
+	z-index: 99;
 
 	@media (max-width: 728px) {
 		padding: 20px;
@@ -46,19 +50,37 @@ const StyledOuterContainer = styled.div`
 	}
 `;
 
+const StyledScrolledHeader = styled.div`
+	background: ${secondColors.blue};
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	transition: width 0.5s ease;
+	z-index: -1;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+	width: ${(props) => (props.triggered ? "100%" : "0%")};
+`;
+
 const Header = ({ siteTitle }) => {
+	const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0,
+		scrolled = scrollY !== 0;
+
 	function scrollToTop() {
 		scroll.scrollToTop();
 	}
 	return (
-		<Fade right duration={2000}>
-			{/* <Headroom> */}
-			<StyledHeader>
+		<StyledHeader>
+			<StyledScrolledHeader triggered={scrolled} />
+			<Fade right duration={2000} style={{ zIndex: 99 }}>
 				<div>
 					<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
 				</div>
+
 				<Nav navLinks={navLinks} />
-				<StyledOuterContainer>
+			</Fade>
+			<StyledOuterContainer>
+				<Fade right duration={2000} style={{ zIndex: 99 }}>
 					<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
 						{navLinks &&
 							navLinks.map(({ name, url }, i) => (
@@ -75,26 +97,10 @@ const Header = ({ siteTitle }) => {
 									{name}
 								</Link>
 							))}
-						{/* <a className="menu-item" href="/">
-							Home
-						</a>
-						<a className="menu-item" href="/about">
-							About
-						</a>
-						<a className="menu-item" href="/contact">
-							Experience
-						</a>
-						<a className="menu-item--small" href="">
-							Work
-						</a>
-						<a className="menu-item--small" href="">
-							Contact
-						</a> */}
 					</Menu>
-				</StyledOuterContainer>
-			</StyledHeader>
-			{/* </Headroom> */}
-		</Fade>
+				</Fade>
+			</StyledOuterContainer>
+		</StyledHeader>
 	);
 };
 
