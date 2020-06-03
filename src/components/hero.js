@@ -5,8 +5,6 @@ import { theme } from "../styles";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledH2 = styled.h2`
-	// color: #c9ad74;
-	// color: #f6d27c;
 	color: ${secondColors.fadedTeal};
 	font-family: ${font.exo2};
 	font-size: ${fontSizes.smTitle};

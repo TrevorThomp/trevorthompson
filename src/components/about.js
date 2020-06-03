@@ -6,7 +6,7 @@ import { theme } from "../styles";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledAboutWrapper = styled.div`
-	height: 70vh;
+	height: 90vh;
 
 	h2 {
 		color: ${secondColors.teal};

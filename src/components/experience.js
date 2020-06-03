@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const { colors, fontSizes, borderRadius, secondColors } = theme;
 
 const StyledExperienceWrapper = styled.div`
-	height: 70vh;
+	height: 90vh;
 `;
 
 const Experience = ({ data }) => {

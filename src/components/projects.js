@@ -6,7 +6,7 @@ import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors } = theme;
 
 const StyledProjectsWrapper = styled.div`
-	height: 50vh;
+	height: 90vh;
 `;
 
 const Projects = ({ data }) => {
