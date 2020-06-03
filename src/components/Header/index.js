@@ -10,6 +10,7 @@ import { theme } from "../../styles";
 import { useScrollYPosition } from "react-use-scroll-position";
 const { fontSizes, hamburgerStyles, secondColors, font } = theme;
 import { slide as Menu } from "react-burger-menu";
+// import Loadable from "@loadable/component";
 
 const StyledHeader = styled.header`
 	position: fixed;
@@ -67,15 +68,15 @@ const StyledScrolledHeader = styled.div`
 `;
 
 const Header = ({ siteTitle }) => {
-	const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0,
-		scrolled = scrollY !== 0;
+	// const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0,
+	// 	scrolled = scrollY !== 0;
 
 	function scrollToTop() {
 		scroll.scrollToTop();
 	}
 	return (
 		<StyledHeader>
-			<StyledScrolledHeader triggered={scrolled} />
+			<StyledScrolledHeader />
 			<Fade right duration={2000} style={{ zIndex: 99 }}>
 				<div>
 					<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
