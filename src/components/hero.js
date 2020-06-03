@@ -50,6 +50,7 @@ const StyledText = styled.p`
 	color: ${secondColors.slateWhite};
 	width: 500px;
 	margin-bottom: 50px;
+	line-height: 1.5em;
 
 	@media (max-width: 728px) {
 		width: 100%;
