@@ -1,6 +1,6 @@
 // import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Nav } from "../index";
@@ -10,6 +10,7 @@ import { theme } from "../../styles";
 import { useScrollYPosition } from "react-use-scroll-position";
 const { fontSizes, hamburgerStyles, secondColors, font } = theme;
 import { slide as Menu } from "react-burger-menu";
+// import Loadable from "@loadable/component";
 
 const StyledHeader = styled.header`
 	position: fixed;
@@ -67,8 +68,9 @@ const StyledScrolledHeader = styled.div`
 `;
 
 const Header = ({ siteTitle }) => {
-	const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0,
-		scrolled = scrollY !== 0;
+	const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0;
+
+	const scrolled = scrollY !== 0;
 
 	function scrollToTop() {
 		scroll.scrollToTop();
@@ -90,9 +92,9 @@ const Header = ({ siteTitle }) => {
 							navLinks.map(({ name, url }, i) => (
 								<Link
 									className="menu-item"
+									key={i}
 									to={url}
 									activeClass="active"
-									to={url}
 									spy={true}
 									smooth={true}
 									offset={-70}

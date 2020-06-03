@@ -6,7 +6,7 @@ import { theme } from "../styles";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledAboutWrapper = styled.div`
-	height: 70vh;
+	height: 90vh;
 
 	h2 {
 		color: ${secondColors.teal};
@@ -61,6 +61,14 @@ const Skill = styled.li`
 	}
 `;
 
+const StyledBackEnd = styled.h4`
+  margin-right 40px;
+
+  @media (max-width: 728px) {
+    margin-right: 50px;
+  }
+`;
+
 const About = ({ data }) => {
 	const {
 		title,
@@ -80,7 +88,7 @@ const About = ({ data }) => {
 			<h3>{languageTitle}</h3>
 			<StyledLanguageTitles>
 				<h4>Front-End</h4>
-				<h4 style={{ marginRight: "40px" }}>Back-End</h4>
+				<StyledBackEnd>Back-End</StyledBackEnd>
 			</StyledLanguageTitles>
 			<StyledLanguageWrapper>
 				<SkillsContainer>
