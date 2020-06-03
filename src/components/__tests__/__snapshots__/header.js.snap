@@ -5,7 +5,7 @@ exports[`Header renders correctly 1`] = `
   className="sc-AxheI fMBlBk"
 >
   <div
-    className="sc-fzozJi eojcCx"
+    className="sc-fzoLsD wvTDX"
   />
   <div
     className="react-reveal"
@@ -16,7 +16,7 @@ exports[`Header renders correctly 1`] = `
     }
   >
     <a
-      className="sc-Axmtr gukCxW"
+      className="sc-AxmLO ciSisX"
       onClick={[Function]}
     >
       Default Starter
@@ -85,7 +85,7 @@ exports[`Header renders correctly 1`] = `
     </nav>
   </div>
   <div
-    className="sc-AxmLO khXogZ"
+    className="sc-fzozJi dPCNTc"
   >
     <div
       className="react-reveal"
@@ -232,6 +232,21 @@ exports[`Header renders correctly 1`] = `
               >
                 Contact
               </a>
+              <button
+                className="sc-Axmtr fPqMCn bm-item"
+                style={
+                  Object {
+                    "color": "#66FCF1",
+                    "display": "inline-block",
+                    "marginBottom": "40px",
+                    "outline": "none",
+                    "textDecoration": "none",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Resume
+              </button>
             </nav>
           </div>
           <div

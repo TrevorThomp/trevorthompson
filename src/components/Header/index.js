@@ -8,9 +8,8 @@ import { navLinks } from "../../config";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { theme } from "../../styles";
 import { useScrollYPosition } from "react-use-scroll-position";
-const { fontSizes, hamburgerStyles, secondColors, font } = theme;
+const { fontSizes, hamburgerStyles, secondColors, font, borderRadius } = theme;
 import { slide as Menu } from "react-burger-menu";
-// import Loadable from "@loadable/component";
 
 const StyledHeader = styled.header`
 	position: fixed;
@@ -26,6 +25,26 @@ const StyledHeader = styled.header`
 	@media (max-width: 728px) {
 		position: relative;
 		padding: 20px;
+	}
+`;
+
+const StyledResumeButton = styled.button`
+	color: #d3d3d3;
+	padding: 10px 15px;
+	border: 1px solid ${secondColors.teal};
+	font-size: ${fontSizes.sm};
+	border-radius: ${borderRadius};
+	background-color: transparent;
+	transition: ${theme.transition};
+	outline: none;
+
+	&:hover {
+		cursor: pointer;
+		background-color: ${secondColors.greenTeal};
+	}
+
+	&:after {
+		display: none !important;
 	}
 `;
 
@@ -103,6 +122,7 @@ const Header = ({ siteTitle }) => {
 									{name}
 								</Link>
 							))}
+						<StyledResumeButton>Resume</StyledResumeButton>
 					</Menu>
 				</Fade>
 			</StyledOuterContainer>

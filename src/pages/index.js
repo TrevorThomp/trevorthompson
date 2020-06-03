@@ -20,7 +20,7 @@ const StyledMain = styled.main`
 	width: 100%;
 	max-width: 1600px;
 	min-height: 100vh;
-	padding-top: 175px;
+	padding-top: 225px;
 	padding-bottom: 200px;
 
 	@media (max-width: 728px) {
@@ -110,8 +110,13 @@ export const pageQuery = graphql`
 				node {
 					frontmatter {
 						title
-						paragraphOne
-						paragraphTwo
+						projectOne
+						projectOneDesc
+						projectOneTech
+						projectTwo
+						projectTwoDesc
+
+						projectTwoTech
 					}
 					html
 				}

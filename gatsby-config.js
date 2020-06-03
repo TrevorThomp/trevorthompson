@@ -8,7 +8,13 @@ module.exports = {
 		`gatsby-plugin-smoothscroll`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-styled-components`,
+		{
+			resolve: `gatsby-plugin-styled-components`,
+			options: {
+				displayName: true,
+				preprocess: false,
+			},
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

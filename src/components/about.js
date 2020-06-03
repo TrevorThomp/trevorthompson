@@ -8,11 +8,6 @@ const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 const StyledAboutWrapper = styled.div`
 	height: 90vh;
 
-	h2 {
-		color: ${secondColors.teal};
-		font-family: ${font.exo2};
-	}
-
 	h3,
 	h4 {
 		color: ${secondColors.greenTeal};
@@ -69,6 +64,28 @@ const StyledBackEnd = styled.h4`
   }
 `;
 
+const StyledTitle = styled.h2`
+	color: ${secondColors.teal};
+	font-family: ${font.exo2};
+
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 300px;
+		background-color: ${secondColors.greenTeal};
+		position: relative;
+		top: -15px;
+		margin-left: 150px;
+
+		@media (max-width: 728px) {
+			top: -12px;
+			width: 190px;
+			margin-left: 130px;
+		}
+	}
+`;
+
 const About = ({ data }) => {
 	const {
 		title,
@@ -82,7 +99,7 @@ const About = ({ data }) => {
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
 	return (
 		<StyledAboutWrapper id="about" ref={revealContainer}>
-			<h2>{title}</h2>
+			<StyledTitle>{title}</StyledTitle>
 			<StyledParagraph>{paragraphOne}</StyledParagraph>
 			<StyledParagraph>{paragraphTwo}</StyledParagraph>
 			<h3>{languageTitle}</h3>

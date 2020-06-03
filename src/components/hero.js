@@ -50,6 +50,7 @@ const StyledText = styled.p`
 	color: ${secondColors.slateWhite};
 	width: 500px;
 	margin-bottom: 50px;
+	line-height: 1.5em;
 
 	@media (max-width: 728px) {
 		width: 100%;
@@ -58,12 +59,14 @@ const StyledText = styled.p`
 
 const StyledContainer = styled.section`
 	height: 90vh;
+
+	@media (max-width: 728px) {
+		height: 70vh;
+	}
 `;
 
 const Hero = ({ data }) => {
 	const { title, name, description } = data[0].node.frontmatter;
-	const { html } = data[0].node;
-	console.log(data);
 	return (
 		<Fade delay={2000} duration={2000} left>
 			<StyledContainer>
