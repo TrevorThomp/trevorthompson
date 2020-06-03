@@ -3,10 +3,32 @@ import styled from "styled-components";
 import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
-const { colors, fontSizes, borderRadius, secondColors } = theme;
+const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledProjectsWrapper = styled.div`
 	height: 90vh;
+`;
+
+const StyledTitle = styled.h2`
+	color: ${secondColors.teal};
+	font-family: ${font.exo2};
+
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 300px;
+		background-color: ${secondColors.greenTeal};
+		position: relative;
+		top: -15px;
+		margin-left: 240px;
+
+		@media (max-width: 728px) {
+			top: -12px;
+			width: 115px;
+			margin-left: 210px;
+		}
+	}
 `;
 
 const Projects = ({ data }) => {
@@ -15,7 +37,7 @@ const Projects = ({ data }) => {
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
 	return (
 		<StyledProjectsWrapper id="projects" ref={revealContainer}>
-			<h2>{title}</h2>
+			<StyledTitle>{title}</StyledTitle>
 		</StyledProjectsWrapper>
 	);
 };
