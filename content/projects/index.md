@@ -10,7 +10,8 @@ projectOneTech:
   - Next.js
 
 projectTwo: "Job Board"
-projectTwoDesc: "Job bidding platform that allows users to post jobs for others to bid on."
+projectTwoDesc: "Job bidding platform that allows users to post jobs that they would like completed. This provides other users the ability to bid on the jobs that they are interested in."
+projectTwoImg: "../images/dashboard.png"
 projectTwoTech:
   - React
   - Redux

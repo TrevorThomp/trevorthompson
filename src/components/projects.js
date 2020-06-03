@@ -4,6 +4,7 @@ import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+// import DashboardImage from "../images/dashboard.png";
 
 const StyledProjectsWrapper = styled.div`
 	height: 110vh;
@@ -61,7 +62,7 @@ const StyledTitle = styled.h2`
 const StyledProjectContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-right: 15px;
+	margin-right: 25px;
 `;
 
 const StyledProjectContainerWrapper = styled.div`
@@ -70,7 +71,8 @@ const StyledProjectContainerWrapper = styled.div`
 `;
 
 const StyledImage = styled.img`
-	// margin-left: 20px;
+	width: 700px;
+	height: 400px;
 `;
 
 const Projects = ({ data }) => {
@@ -81,6 +83,7 @@ const Projects = ({ data }) => {
 		projectOneTech,
 		projectTwo,
 		projectTwoDesc,
+		projectTwoImage,
 		projectTwoTech,
 	} = data[0].node.frontmatter;
 	const revealContainer = useRef(null);
@@ -99,7 +102,7 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<div>
-					<StyledImage src="https://via.placeholder.com/2000"></StyledImage>
+					{/* <StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage> */}
 				</div>
 			</StyledProjectContainerWrapper>
 
@@ -114,7 +117,7 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<div>
-					<StyledImage src="https://via.placeholder.com/475"></StyledImage>
+					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
 				</div>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>
