@@ -36,7 +36,12 @@
   },
   "devDependencies": {
     "@upstatement/prettier-config": "^0.3.0",
-    "prettier": "2.0.5"
+    "babel-jest": "^26.0.1",
+    "babel-preset-gatsby": "^0.4.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.0.1",
+    "prettier": "2.0.5",
+    "react-test-renderer": "^16.13.1"
   },
   "keywords": [
     "gatsby"
@@ -49,7 +54,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

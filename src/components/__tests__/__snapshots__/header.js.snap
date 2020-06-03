@@ -1,0 +1,396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="sc-AxheI fMBlBk"
+>
+  <div
+    className="sc-fzozJi eojcCx"
+  />
+  <div
+    className="react-reveal"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <a
+      className="sc-Axmtr gukCxW"
+      onClick={[Function]}
+    >
+      Default Starter
+    </a>
+  </div>
+  <div
+    className="react-reveal"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <nav
+      className="sc-AxjAm dSoyGq"
+    >
+      <ol
+        className="sc-AxirZ fPvlTM"
+      >
+        <li
+          className="sc-AxiKw feSSGJ"
+        >
+          <a
+            className="sc-AxhCb gVYchl"
+            onClick={[Function]}
+          >
+            About
+          </a>
+        </li>
+        <li
+          className="sc-AxiKw feSSGJ"
+        >
+          <a
+            className="sc-AxhCb gVYchl"
+            onClick={[Function]}
+          >
+            Experience
+          </a>
+        </li>
+        <li
+          className="sc-AxiKw feSSGJ"
+        >
+          <a
+            className="sc-AxhCb gVYchl"
+            onClick={[Function]}
+          >
+            Work
+          </a>
+        </li>
+        <li
+          className="sc-AxiKw feSSGJ"
+        >
+          <a
+            className="sc-AxhCb gVYchl"
+            onClick={[Function]}
+          >
+            Contact
+          </a>
+        </li>
+        <button
+          className="sc-AxhUy kYpQhx"
+        >
+          Resume
+        </button>
+      </ol>
+    </nav>
+  </div>
+  <div
+    className="sc-AxmLO khXogZ"
+  >
+    <div
+      className="react-reveal"
+      style={
+        Object {
+          "opacity": undefined,
+        }
+      }
+    >
+      <div>
+        <div
+          className="bm-overlay"
+          onClick={[Function]}
+          style={
+            Object {
+              "MozTransform": "translate3d(100%, 0, 0)",
+              "MsTransform": "translate3d(100%, 0, 0)",
+              "OTransform": "translate3d(100%, 0, 0)",
+              "WebkitTransform": "translate3d(100%, 0, 0)",
+              "background": "transparent",
+              "height": "100%",
+              "opacity": 0,
+              "position": "fixed",
+              "transform": "translate3d(100%, 0, 0)",
+              "transition": "opacity 0.3s, transform 0s 0.3s",
+              "width": "100%",
+              "zIndex": 1000,
+            }
+          }
+        />
+        <div
+          className="bm-menu-wrap"
+          id=""
+          style={
+            Object {
+              "MozTransform": "translate3d(100%, 0, 0)",
+              "MsTransform": "translate3d(100%, 0, 0)",
+              "OTransform": "translate3d(100%, 0, 0)",
+              "WebkitTransform": "translate3d(100%, 0, 0)",
+              "height": "100%",
+              "position": "fixed",
+              "right": 0,
+              "top": "0",
+              "transform": "translate3d(100%, 0, 0)",
+              "transition": "all 0.5s",
+              "width": "200px",
+              "zIndex": 1100,
+            }
+          }
+        >
+          <div
+            className="bm-menu"
+            style={
+              Object {
+                "alignItems": "center",
+                "background": "#1F2833",
+                "borderRadius": "5px",
+                "boxSizing": "border-box",
+                "display": "flex",
+                "fontSize": "1.15em",
+                "height": "100%",
+                "justifyContent": "center",
+                "overflow": "auto",
+                "padding": "1.5em 1.5em 0",
+                "zIndex": "99",
+              }
+            }
+          >
+            <nav
+              className="bm-item-list"
+              style={
+                Object {
+                  "color": "red",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "marginTop": "100px",
+                  "padding": "0.8em",
+                  "paddingLeft": "2em",
+                }
+              }
+            >
+              <a
+                className="bm-item menu-item"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "#66FCF1",
+                    "display": "inline-block",
+                    "marginBottom": "40px",
+                    "outline": "none",
+                    "textDecoration": "none",
+                  }
+                }
+                tabIndex={-1}
+              >
+                About
+              </a>
+              <a
+                className="bm-item menu-item"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "#66FCF1",
+                    "display": "inline-block",
+                    "marginBottom": "40px",
+                    "outline": "none",
+                    "textDecoration": "none",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Experience
+              </a>
+              <a
+                className="bm-item menu-item"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "#66FCF1",
+                    "display": "inline-block",
+                    "marginBottom": "40px",
+                    "outline": "none",
+                    "textDecoration": "none",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Work
+              </a>
+              <a
+                className="bm-item menu-item"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "#66FCF1",
+                    "display": "inline-block",
+                    "marginBottom": "40px",
+                    "outline": "none",
+                    "textDecoration": "none",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Contact
+              </a>
+            </nav>
+          </div>
+          <div
+            style={Object {}}
+          >
+            <div
+              className="bm-cross-button"
+              style={
+                Object {
+                  "height": "24px",
+                  "position": "absolute",
+                  "right": "15px",
+                  "top": "15px",
+                  "width": "24px",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": "14px",
+                    "top": "6px",
+                  }
+                }
+              >
+                <span
+                  className="bm-cross"
+                  style={
+                    Object {
+                      "background": "#66FCF1",
+                      "height": "20px",
+                      "position": "absolute",
+                      "transform": "rotate(45deg)",
+                      "width": 3,
+                    }
+                  }
+                />
+                <span
+                  className="bm-cross"
+                  style={
+                    Object {
+                      "background": "#66FCF1",
+                      "height": "20px",
+                      "position": "absolute",
+                      "transform": "rotate(-45deg)",
+                      "width": 3,
+                    }
+                  }
+                />
+              </span>
+              <button
+                onClick={[Function]}
+                style={
+                  Object {
+                    "background": "transparent",
+                    "border": "none",
+                    "cursor": "pointer",
+                    "fontSize": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "margin": 0,
+                    "padding": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Close Menu
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          style={Object {}}
+        >
+          <div
+            className="bm-burger-button"
+            style={
+              Object {
+                "height": "25px",
+                "position": "relative",
+                "width": "30px",
+                "zIndex": 1000,
+              }
+            }
+          >
+            <span>
+              <span
+                className="bm-burger-bars"
+                style={
+                  Object {
+                    "background": "#66FCF1",
+                    "height": "20%",
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": "0%",
+                  }
+                }
+              />
+              <span
+                className="bm-burger-bars"
+                style={
+                  Object {
+                    "background": "#66FCF1",
+                    "height": "20%",
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": "40%",
+                  }
+                }
+              />
+              <span
+                className="bm-burger-bars"
+                style={
+                  Object {
+                    "background": "#66FCF1",
+                    "height": "20%",
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": "80%",
+                  }
+                }
+              />
+            </span>
+            <button
+              onClick={[Function]}
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "background": "transparent",
+                  "border": "none",
+                  "cursor": "pointer",
+                  "fontSize": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "margin": 0,
+                  "padding": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            >
+              Open Menu
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+`;

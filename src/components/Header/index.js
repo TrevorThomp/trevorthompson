@@ -90,9 +90,9 @@ const Header = ({ siteTitle }) => {
 							navLinks.map(({ name, url }, i) => (
 								<Link
 									className="menu-item"
+									key={i}
 									to={url}
 									activeClass="active"
-									to={url}
 									spy={true}
 									smooth={true}
 									offset={-70}
