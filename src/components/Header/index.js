@@ -1,6 +1,6 @@
 // import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Nav } from "../index";
@@ -68,15 +68,16 @@ const StyledScrolledHeader = styled.div`
 `;
 
 const Header = ({ siteTitle }) => {
-	// const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0,
-	// 	scrolled = scrollY !== 0;
+	const scrollY = typeof window !== "undefined" ? useScrollYPosition() : 0;
+
+	const scrolled = scrollY !== 0;
 
 	function scrollToTop() {
 		scroll.scrollToTop();
 	}
 	return (
 		<StyledHeader>
-			<StyledScrolledHeader />
+			<StyledScrolledHeader triggered={scrolled} />
 			<Fade right duration={2000} style={{ zIndex: 99 }}>
 				<div>
 					<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
