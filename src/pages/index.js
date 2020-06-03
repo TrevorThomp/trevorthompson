@@ -110,8 +110,12 @@ export const pageQuery = graphql`
 				node {
 					frontmatter {
 						title
-						paragraphOne
-						paragraphTwo
+						projectOne
+						projectOneDesc
+						projectOneTech
+						projectTwo
+						projectTwoDesc
+						projectTwoTech
 					}
 					html
 				}
