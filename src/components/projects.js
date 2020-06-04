@@ -4,16 +4,20 @@ import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
-// import DashboardImage from "../images/dashboard.png";
 
 const StyledProjectsWrapper = styled.div`
-	height: 110vh;
-	width: 1200px;
+	height: 80vh;
+	width: 1000px;
 
 	p {
 		font-family: ${font.roboto};
 		font-size: ${fontSizes.md};
 		line-height: 1.6;
+		width: 80%;
+
+		@media (max-width: 728px) {
+			width: 100%;
+		}
 	}
 
 	h3 {
@@ -24,6 +28,7 @@ const StyledProjectsWrapper = styled.div`
 	li {
 		position: relative;
 		padding-left: 20px;
+		font-family: ${font.roboto};
 		font-size: ${fontSizes.md};
 		color: ${secondColors.slateWhite};
 		list-style-type: none;
@@ -34,6 +39,11 @@ const StyledProjectsWrapper = styled.div`
 			color: ${secondColors.teal};
 			font-size: ${fontSizes.md};
 		}
+	}
+
+	@media (max-width: 728px) {
+		height: 170vh;
+		width: 100%;
 	}
 `;
 
@@ -63,17 +73,30 @@ const StyledProjectContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin-right: 25px;
+
+	@media (max-width: 728px) {
+		margin: 0;
+	}
 `;
 
 const StyledProjectContainerWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 728px) {
+		flex-direction: column;
+	}
 `;
 
 const StyledImage = styled.img`
 	width: 700px;
-	height: 400px;
+	height: 200px;
+	border-radius: ${borderRadius};
+	border: 1px solid ${secondColors.teal};
+	padding: 10px;
 `;
+
+const StyledImageContainer = styled.div``;
 
 const Projects = ({ data }) => {
 	const {
@@ -93,17 +116,17 @@ const Projects = ({ data }) => {
 			<StyledTitle>{title}</StyledTitle>
 			<StyledProjectContainerWrapper>
 				<StyledProjectContainer>
-					<h3>{projectOne}</h3>
-					<p>{projectOneDesc}</p>
-					<ul>
+					<h3 style={{}}>{projectOne}</h3>
+					<p>{projectTwoDesc}</p>
+					<ul style={{}}>
 						{projectOneTech.map((item) => (
 							<li>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
-				<div>
-					{/* <StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage> */}
-				</div>
+				<StyledImageContainer>
+					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
+				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
 			<StyledProjectContainerWrapper>
@@ -116,9 +139,9 @@ const Projects = ({ data }) => {
 						))}
 					</ul>
 				</StyledProjectContainer>
-				<div>
+				<StyledImageContainer>
 					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
-				</div>
+				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>
 	);
