@@ -30,7 +30,7 @@ const StyledMain = styled.main`
 `;
 
 const StyledSection = styled.section`
-	width: 700px;
+	width: 800px;
 
 	@media (max-width: 728px) {
 		width: 100%;
