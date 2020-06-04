@@ -32,7 +32,9 @@ const StyledFooter = styled.footer`
 const Footer = () => {
 	return (
 		<StyledFooter>
-			<p>&copy; Copyright 2020 - Trevor Thompson</p>
+			<p style={{ paddingBottom: "10px" }}>
+				&copy; Copyright 2020 - Trevor Thompson
+			</p>
 		</StyledFooter>
 	);
 };

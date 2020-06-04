@@ -8,6 +8,7 @@ module.exports = {
 		`gatsby-plugin-smoothscroll`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-styled-components`,
 			options: {
@@ -18,7 +19,7 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `images`,
+				name: `content`,
 				path: `${__dirname}/content/`,
 			},
 		},
@@ -28,7 +29,31 @@ module.exports = {
 				offset: -200,
 			},
 		},
-		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					// {
+					// 	// https://www.gatsbyjs.org/packages/gatsby-remark-external-links
+					// 	resolve: "gatsby-remark-external-links",
+					// 	options: {
+					// 		target: "_blank",
+					// 		rel: "nofollow noopener noreferrer",
+					// 	},
+					// },
+					{
+						// https://www.gatsbyjs.org/packages/gatsby-remark-images
+						resolve: "gatsby-remark-images",
+						options: {
+							maxWidth: 700,
+							linkImagesToOriginal: true,
+							quality: 90,
+							// tracedSVG: { color: config.colors.green },
+						},
+					},
+				],
+			},
+		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{

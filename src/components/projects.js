@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { graphql } from "gatsby";
 import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+import Img from "gatsby-image";
 
 const StyledProjectsWrapper = styled.div`
 	height: 80vh;
@@ -88,15 +90,24 @@ const StyledProjectContainerWrapper = styled.div`
 	}
 `;
 
-const StyledImage = styled.img`
-	width: 700px;
-	height: 200px;
+const StyledImage = styled(Img)`
+	width: 100%;
+	// height: 250px;
+	max-width: 100%;
 	border-radius: ${borderRadius};
 	border: 1px solid ${secondColors.teal};
-	padding: 10px;
+	padding: 50px;
+	margin-bottom: 50px;
+
+	@media (max-width: 728px) {
+		width: 325px;
+	}
 `;
 
-const StyledImageContainer = styled.div``;
+const StyledImageContainer = styled.div`
+	width: 800px;
+	// height: 400px;
+`;
 
 const Projects = ({ data }) => {
 	const {
@@ -106,9 +117,10 @@ const Projects = ({ data }) => {
 		projectOneTech,
 		projectTwo,
 		projectTwoDesc,
-		projectTwoImage,
+		projectTwoImg,
 		projectTwoTech,
 	} = data[0].node.frontmatter;
+
 	const revealContainer = useRef(null);
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
 	return (
@@ -125,7 +137,9 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
+					<StyledImage
+						fluid={projectTwoImg.childImageSharp.fluid}
+					></StyledImage>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
@@ -139,9 +153,7 @@ const Projects = ({ data }) => {
 						))}
 					</ul>
 				</StyledProjectContainer>
-				<StyledImageContainer>
-					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
-				</StyledImageContainer>
+				<StyledImageContainer>{/* <Img></Img> */}</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>
 	);
