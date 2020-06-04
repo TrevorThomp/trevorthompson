@@ -1,5 +1,4 @@
 import React from "react";
-import Fade from "react-reveal";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import {
@@ -10,6 +9,7 @@ import {
 	Projects,
 	Nav,
 	Header,
+	Footer,
 } from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
@@ -49,6 +49,7 @@ const IndexPage = ({ location, data }) => {
 					<Projects data={projects.edges} />
 				</StyledSection>
 			</StyledMain>
+			<Footer />
 		</Layout>
 	);
 };

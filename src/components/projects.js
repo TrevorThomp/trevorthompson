@@ -117,7 +117,7 @@ const Projects = ({ data }) => {
 			<StyledProjectContainerWrapper>
 				<StyledProjectContainer>
 					<h3 style={{}}>{projectOne}</h3>
-					<p>{projectTwoDesc}</p>
+					<p>{projectOneDesc}</p>
 					<ul style={{}}>
 						{projectOneTech.map((item) => (
 							<li>{item}</li>
