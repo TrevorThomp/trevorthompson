@@ -28,6 +28,7 @@ const StyledProjectsWrapper = styled.div`
 	li {
 		position: relative;
 		padding-left: 20px;
+		font-family: ${font.roboto};
 		font-size: ${fontSizes.md};
 		color: ${secondColors.slateWhite};
 		list-style-type: none;
@@ -89,7 +90,12 @@ const StyledProjectContainerWrapper = styled.div`
 const StyledImage = styled.img`
 	width: 700px;
 	height: 200px;
+	border-radius: ${borderRadius};
+	border: 1px solid ${secondColors.teal};
+	padding: 10px;
 `;
+
+const StyledImageContainer = styled.div``;
 
 const Projects = ({ data }) => {
 	const {
@@ -109,17 +115,17 @@ const Projects = ({ data }) => {
 			<StyledTitle>{title}</StyledTitle>
 			<StyledProjectContainerWrapper>
 				<StyledProjectContainer>
-					<h3>{projectOne}</h3>
+					<h3 style={{}}>{projectOne}</h3>
 					<p>{projectTwoDesc}</p>
-					<ul>
+					<ul style={{}}>
 						{projectOneTech.map((item) => (
 							<li>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
-				<div>
+				<StyledImageContainer>
 					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
-				</div>
+				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
 			<StyledProjectContainerWrapper>
@@ -132,9 +138,9 @@ const Projects = ({ data }) => {
 						))}
 					</ul>
 				</StyledProjectContainer>
-				<div>
+				<StyledImageContainer>
 					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
-				</div>
+				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>
 	);
