@@ -4,7 +4,6 @@ import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
-import Img from "gatsby-image";
 
 const StyledProjectsWrapper = styled.div`
 	height: 80vh;
@@ -166,7 +165,7 @@ const Projects = ({ data }) => {
 							borderRadius: `${borderRadius}`,
 							border: `1px solid ${secondColors.teal}`,
 						}}
-						src={`dashboard.png`}
+						src={`jobBoard.png`}
 					></img>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
