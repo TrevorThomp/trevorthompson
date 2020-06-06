@@ -114,23 +114,9 @@ export const pageQuery = graphql`
 						projectOne
 						projectOneDesc
 						projectOneTech
-						projectOneImg {
-							childImageSharp {
-								fluid(maxWidth: 600, quality: 100) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
 						projectTwo
 						projectTwoDesc
 						projectTwoTech
-						projectTwoImg {
-							childImageSharp {
-								fluid(maxWidth: 700, quality: 100) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
 					}
 				}
 			}
