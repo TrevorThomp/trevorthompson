@@ -89,22 +89,20 @@ const StyledProjectContainerWrapper = styled.div`
 	}
 `;
 
-const StyledImage = styled.img`
-	max-width: 300px;
-	max-width: 100%;
-	border-radius: ${borderRadius};
-	border: 1px solid ${secondColors.teal};
-	padding: 10px;
-	margin-bottom: 50px;
+// const StyledImage = styled.img`
+// 	max-width: 300px;
+// 	max-width: 100%;
+// 	border-radius: ${borderRadius};
+// 	border: 1px solid ${secondColors.teal};
+// 	padding: 10px;
+// 	margin-bottom: 50px;
 
-	@media (max-width: 728px) {
-		width: 325px;
-	}
-`;
+// 	@media (max-width: 728px) {
+// 		width: 325px;
+// 	}
+// `;
 
-const StyledImageContainer = styled.div`
-	// max-width: 1200px;
-`;
+const StyledImageContainer = styled.div``;
 
 const Projects = ({ data }) => {
 	const {
@@ -136,7 +134,6 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					{/* <StyledImage src={`dashboard.png`}></StyledImage> */}
 					<img
 						style={{
 							padding: "10px",
@@ -161,7 +158,6 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					{/* <StyledImage src={`dashboard.png`}></StyledImage> */}
 					<img
 						style={{
 							padding: "10px",
