@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { graphql } from "gatsby";
 import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
@@ -94,8 +93,8 @@ const StyledImage = styled(Img)`
 	width: 100%;
 	// height: 250px;
 	max-width: 100%;
-	border-radius: ${borderRadius};
-	border: 1px solid ${secondColors.teal};
+	// border-radius: ${borderRadius};
+	// border: 1px solid ${secondColors.teal};
 	padding: 50px;
 	margin-bottom: 50px;
 
@@ -105,8 +104,13 @@ const StyledImage = styled(Img)`
 `;
 
 const StyledImageContainer = styled.div`
-	width: 800px;
-	// height: 400px;
+	width: 1100px;
+  
+  picture img {
+    border-radius: ${borderRadius};
+    border: 1px solid ${secondColors.teal};
+    padding 10px;
+  }
 `;
 
 const Projects = ({ data }) => {
