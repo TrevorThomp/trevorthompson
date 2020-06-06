@@ -43,7 +43,7 @@ const Experience = ({ data }) => {
 	return (
 		<StyledExperienceWrapper id="experience" ref={revealContainer}>
 			<StyledTitle>{title}</StyledTitle>
-			<button onClick={scrollToTop}>TESTING</button>
+			<button onClick={scrollToTop}>Coming Soon!</button>
 		</StyledExperienceWrapper>
 	);
 };
