@@ -89,13 +89,12 @@ const StyledProjectContainerWrapper = styled.div`
 	}
 `;
 
-const StyledImage = styled(Img)`
-	width: 100%;
-	// height: 250px;
+const StyledImage = styled.img`
+	max-width: 300px;
 	max-width: 100%;
-	// border-radius: ${borderRadius};
-	// border: 1px solid ${secondColors.teal};
-	padding: 50px;
+	border-radius: ${borderRadius};
+	border: 1px solid ${secondColors.teal};
+	padding: 10px;
 	margin-bottom: 50px;
 
 	@media (max-width: 728px) {
@@ -104,13 +103,7 @@ const StyledImage = styled(Img)`
 `;
 
 const StyledImageContainer = styled.div`
-	width: 1100px;
-  
-  picture img {
-    border-radius: ${borderRadius};
-    border: 1px solid ${secondColors.teal};
-    padding 10px;
-  }
+	// max-width: 1200px;
 `;
 
 const Projects = ({ data }) => {
@@ -119,6 +112,7 @@ const Projects = ({ data }) => {
 		projectOne,
 		projectOneDesc,
 		projectOneTech,
+		projectOneImg,
 		projectTwo,
 		projectTwoDesc,
 		projectTwoImg,
@@ -130,20 +124,29 @@ const Projects = ({ data }) => {
 	return (
 		<StyledProjectsWrapper id="projects" ref={revealContainer}>
 			<StyledTitle>{title}</StyledTitle>
+
 			<StyledProjectContainerWrapper>
 				<StyledProjectContainer>
-					<h3 style={{}}>{projectOne}</h3>
+					<h3>{projectOne}</h3>
 					<p>{projectOneDesc}</p>
-					<ul style={{}}>
+					<ul>
 						{projectOneTech.map((item) => (
 							<li>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<StyledImage
-						fluid={projectTwoImg.childImageSharp.fluid}
-					></StyledImage>
+					{/* <StyledImage src={`dashboard.png`}></StyledImage> */}
+					<img
+						style={{
+							padding: "10px",
+							width: "1200px",
+							height: "225px",
+							borderRadius: `${borderRadius}`,
+							border: `1px solid ${secondColors.teal}`,
+						}}
+						src={`sosBend.png`}
+					></img>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
@@ -157,7 +160,19 @@ const Projects = ({ data }) => {
 						))}
 					</ul>
 				</StyledProjectContainer>
-				<StyledImageContainer>{/* <Img></Img> */}</StyledImageContainer>
+				<StyledImageContainer>
+					{/* <StyledImage src={`dashboard.png`}></StyledImage> */}
+					<img
+						style={{
+							padding: "10px",
+							width: "980px",
+							height: "225px",
+							borderRadius: `${borderRadius}`,
+							border: `1px solid ${secondColors.teal}`,
+						}}
+						src={`dashboard.png`}
+					></img>
+				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>
 	);
