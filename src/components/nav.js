@@ -38,7 +38,7 @@ const StyledListLink = styled(Link)`
 	}
 `;
 
-const StyledResumeButton = styled.button`
+const StyledResumeButton = styled.a`
 	color: #d3d3d3;
 	padding: 5px 10px;
 	border: 1px solid ${secondColors.teal};
@@ -47,6 +47,7 @@ const StyledResumeButton = styled.button`
 	background-color: transparent;
 	transition: ${theme.transition};
 	outline: none;
+	text-decoration: none;
 
 	&:hover {
 		cursor: pointer;
@@ -78,9 +79,9 @@ const Nav = ({ navLinks }) => {
 						</StyledListItem>
 					))}
 				<StyledResumeButton
-					href={`/resume.pdf`}
-					// target="_blank"
-					// rel="nofollow noopener noreferrer"
+					href={`resume.pdf`}
+					target="_blank"
+					rel="nofollow noopener noreferrer"
 				>
 					Resume
 				</StyledResumeButton>
