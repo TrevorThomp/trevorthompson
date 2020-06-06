@@ -76,11 +76,14 @@ exports[`Header renders correctly 1`] = `
             Contact
           </a>
         </li>
-        <button
-          className="sc-AxhUy kYpQhx"
+        <a
+          className="sc-AxhUy eeJrxD"
+          href="resume.pdf"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
         >
           Resume
-        </button>
+        </a>
       </ol>
     </nav>
   </div>
@@ -232,8 +235,10 @@ exports[`Header renders correctly 1`] = `
               >
                 Contact
               </a>
-              <button
-                className="sc-Axmtr fPqMCn bm-item"
+              <a
+                className="sc-Axmtr dYyYjI bm-item"
+                href="/resume.pdf"
+                rel="nofollow noopener noreferrer"
                 style={
                   Object {
                     "color": "#66FCF1",
@@ -244,9 +249,10 @@ exports[`Header renders correctly 1`] = `
                   }
                 }
                 tabIndex={-1}
+                target="_blank"
               >
                 Resume
-              </button>
+              </a>
             </nav>
           </div>
           <div

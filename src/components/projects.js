@@ -4,6 +4,7 @@ import { theme } from "../styles";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+import Img from "gatsby-image";
 
 const StyledProjectsWrapper = styled.div`
 	height: 80vh;
@@ -88,13 +89,18 @@ const StyledProjectContainerWrapper = styled.div`
 	}
 `;
 
-const StyledImage = styled.img`
-	width: 700px;
-	height: 200px;
-	border-radius: ${borderRadius};
-	border: 1px solid ${secondColors.teal};
-	padding: 10px;
-`;
+// const StyledImage = styled.img`
+// 	max-width: 300px;
+// 	max-width: 100%;
+// 	border-radius: ${borderRadius};
+// 	border: 1px solid ${secondColors.teal};
+// 	padding: 10px;
+// 	margin-bottom: 50px;
+
+// 	@media (max-width: 728px) {
+// 		width: 325px;
+// 	}
+// `;
 
 const StyledImageContainer = styled.div``;
 
@@ -104,28 +110,40 @@ const Projects = ({ data }) => {
 		projectOne,
 		projectOneDesc,
 		projectOneTech,
+		projectOneImg,
 		projectTwo,
 		projectTwoDesc,
-		projectTwoImage,
+		projectTwoImg,
 		projectTwoTech,
 	} = data[0].node.frontmatter;
+
 	const revealContainer = useRef(null);
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
 	return (
 		<StyledProjectsWrapper id="projects" ref={revealContainer}>
 			<StyledTitle>{title}</StyledTitle>
+
 			<StyledProjectContainerWrapper>
 				<StyledProjectContainer>
-					<h3 style={{}}>{projectOne}</h3>
+					<h3>{projectOne}</h3>
 					<p>{projectOneDesc}</p>
-					<ul style={{}}>
+					<ul>
 						{projectOneTech.map((item) => (
 							<li>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
+					<img
+						style={{
+							padding: "10px",
+							width: "1200px",
+							height: "225px",
+							borderRadius: `${borderRadius}`,
+							border: `1px solid ${secondColors.teal}`,
+						}}
+						src={`sosBend.png`}
+					></img>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
@@ -140,7 +158,16 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<StyledImage src={`dashboard.png`} alt="dashboard"></StyledImage>
+					<img
+						style={{
+							padding: "10px",
+							width: "980px",
+							height: "225px",
+							borderRadius: `${borderRadius}`,
+							border: `1px solid ${secondColors.teal}`,
+						}}
+						src={`dashboard.png`}
+					></img>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>

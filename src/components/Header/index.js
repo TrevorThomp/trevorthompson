@@ -28,15 +28,17 @@ const StyledHeader = styled.header`
 	}
 `;
 
-const StyledResumeButton = styled.button`
+const StyledResumeButton = styled.a`
 	color: #d3d3d3;
-	padding: 10px 15px;
+	padding: 10px 10px;
 	border: 1px solid ${secondColors.teal};
 	font-size: ${fontSizes.sm};
 	border-radius: ${borderRadius};
 	background-color: transparent;
 	transition: ${theme.transition};
 	outline: none;
+	text-decoration: none;
+	text-align: center;
 
 	&:hover {
 		cursor: pointer;
@@ -122,7 +124,13 @@ const Header = ({ siteTitle }) => {
 									{name}
 								</Link>
 							))}
-						<StyledResumeButton>Resume</StyledResumeButton>
+						<StyledResumeButton
+							href="/resume.pdf"
+							target="_blank"
+							rel="nofollow noopener noreferrer"
+						>
+							Resume
+						</StyledResumeButton>
 					</Menu>
 				</Fade>
 			</StyledOuterContainer>
