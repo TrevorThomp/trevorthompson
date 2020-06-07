@@ -10,6 +10,15 @@ projectOneTech:
   - Styled Components
   - Next.js
 
+projectThree: "Habitat for Humanity - La Pine Sunriver"
+projectThreeDesc: ""
+projectThreeImg:
+projectThreeTech:
+  - React
+  - Styled Components
+  - Gatsby
+  - Sanity CMS
+
 projectTwo: "Job Board"
 projectTwoDesc: "Job bidding platform that allows users to post jobs that they would like completed. This provides other users the ability to bid on the jobs that they are interested in."
 projectTwoImg: "./jobBoard.png"
