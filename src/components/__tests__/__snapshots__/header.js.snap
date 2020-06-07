@@ -66,16 +66,6 @@ exports[`Header renders correctly 1`] = `
             Work
           </a>
         </li>
-        <li
-          className="sc-AxiKw feSSGJ"
-        >
-          <a
-            className="sc-AxhCb gVYchl"
-            onClick={[Function]}
-          >
-            Contact
-          </a>
-        </li>
         <a
           className="sc-AxhUy eeJrxD"
           href="resume.pdf"
@@ -218,22 +208,6 @@ exports[`Header renders correctly 1`] = `
                 tabIndex={-1}
               >
                 Work
-              </a>
-              <a
-                className="bm-item menu-item"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "color": "#66FCF1",
-                    "display": "inline-block",
-                    "marginBottom": "40px",
-                    "outline": "none",
-                    "textDecoration": "none",
-                  }
-                }
-                tabIndex={-1}
-              >
-                Contact
               </a>
               <a
                 className="sc-Axmtr dYyYjI bm-item"
