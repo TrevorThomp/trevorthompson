@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { theme } from "../styles";
+const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const SocialContainer = styled.div`
 	// display: none;
 	position: fixed;
-	right: 300px;
-	bottom: 300px;
+	right: 250px;
+	bottom: 200px;
 
 	li {
 		list-style: none;
@@ -28,6 +29,16 @@ const SocialContainer = styled.div`
 	ul {
 		opacity: 0;
 		transition: 2s opacity;
+		margin-bottom: 175px;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0px;
+			left: 38px;
+			height: 150px;
+			border: 1px solid ${secondColors.greenTeal};
+		}
 	}
 
 	.fade-in {
