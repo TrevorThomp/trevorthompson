@@ -78,7 +78,7 @@ const Nav = ({ navLinks }) => {
 						</StyledListItem>
 					))}
 				<StyledResumeButton
-					href={`trevorResume.pdf`}
+					href={`resume.pdf`}
 					target="_blank"
 					rel="nofollow noopener noreferrer"
 				>
