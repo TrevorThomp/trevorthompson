@@ -48,7 +48,6 @@ const StyledResumeButton = styled.a`
 	transition: ${theme.transition};
 	outline: none;
 	text-decoration: none;
-
 	&:hover {
 		cursor: pointer;
 		background-color: ${secondColors.greenTeal};
@@ -79,7 +78,7 @@ const Nav = ({ navLinks }) => {
 						</StyledListItem>
 					))}
 				<StyledResumeButton
-					href={`resume.pdf`}
+					href={`trevorResume.pdf`}
 					target="_blank"
 					rel="nofollow noopener noreferrer"
 				>
