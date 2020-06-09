@@ -97,8 +97,13 @@ export const pageQuery = graphql`
 				node {
 					frontmatter {
 						title
-						paragraphOne
-						paragraphTwo
+						jobOne
+						jobOneTime
+						jobOneDescription
+						jobOneTech
+						jobTwoTitle
+						jobTwoTime
+						jobTwoDescription
 					}
 					html
 				}

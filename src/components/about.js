@@ -109,13 +109,13 @@ const About = ({ data }) => {
 			</StyledLanguageTitles>
 			<StyledLanguageWrapper>
 				<SkillsContainer>
-					{frontEnd.map((item) => (
-						<Skill>{item}</Skill>
+					{frontEnd.map((item, i) => (
+						<Skill key={i}>{item}</Skill>
 					))}
 				</SkillsContainer>
 				<SkillsContainer>
-					{backEnd.map((item) => (
-						<Skill>{item}</Skill>
+					{backEnd.map((item, i) => (
+						<Skill key={i}>{item}</Skill>
 					))}
 				</SkillsContainer>
 			</StyledLanguageWrapper>

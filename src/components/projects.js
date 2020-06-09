@@ -127,8 +127,8 @@ const Projects = ({ data }) => {
 					<h3>{projectOne}</h3>
 					<p>{projectOneDesc}</p>
 					<ul>
-						{projectOneTech.map((item) => (
-							<li>{item}</li>
+						{projectOneTech.map((item, i) => (
+							<li key={i}>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
@@ -151,8 +151,8 @@ const Projects = ({ data }) => {
 					<h3>{projectTwo}</h3>
 					<p>{projectTwoDesc}</p>
 					<ul>
-						{projectTwoTech.map((item) => (
-							<li>{item}</li>
+						{projectTwoTech.map((item, i) => (
+							<li key={i}>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
