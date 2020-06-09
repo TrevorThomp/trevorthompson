@@ -14,6 +14,21 @@ module.exports = {
 		},
 	],
 
+	socialLinks: [
+		{
+			name: "Github",
+			url: "https://github.com/TrevorThomp",
+		},
+		{
+			name: "Twitter",
+			url: "https://twitter.com/ThompTrevor",
+		},
+		{
+			name: "LinkedIn",
+			url: "https://www.linkedin.com/in/trevorthomp/",
+		},
+	],
+
 	srConfig: (delay = 150) => ({
 		origin: "bottom",
 		distance: "20px",
