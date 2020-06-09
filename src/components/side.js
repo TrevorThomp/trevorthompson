@@ -4,14 +4,9 @@ import { theme } from "../styles";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const SocialContainer = styled.div`
-	// display: none;
 	position: fixed;
-	right: 250px;
-	bottom: 200px;
-
-	li {
-		list-style: none;
-	}
+	right: 200px;
+	bottom: 0px;
 
 	a:hover {
 		border-radius: 100%;
@@ -29,27 +24,36 @@ const SocialContainer = styled.div`
 	ul {
 		opacity: 0;
 		transition: 2s opacity;
-		margin-bottom: 175px;
+		margin-bottom: 100px;
 		&:after {
 			content: "";
 			display: block;
 			position: absolute;
 			bottom: 0px;
 			left: 38px;
-			height: 150px;
-			border: 1px solid ${secondColors.greenTeal};
+			height: 75px;
+			background: ${secondColors.blue};
+			width: 1px;
+		}
+
+		li {
+			list-style: none;
+			padding-bottom: 10px;
 		}
 	}
 
 	.fade-in {
 		opacity: 1;
 	}
+
+	@media (max-width: 728px) {
+		display: none;
+	}
 `;
 
 const StyledIcon = styled.a`
 	display: block;
-	color: teal;
-	fill: teal;
+	fill: ${secondColors.slateWhite};
 	position: relative;
 	height: 25px;
 	width: 25px;
@@ -81,7 +85,11 @@ const Side = () => {
 					</StyledIcon>
 				</li>
 				<li>
-					<StyledIcon href="https://twitter.com/ThompTrevor" title="Twitter">
+					<StyledIcon
+						href="https://twitter.com/ThompTrevor"
+						target="_blank"
+						title="Twitter"
+					>
 						<svg viewBox="0 0 512 512">
 							<path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z" />
 						</svg>
@@ -90,6 +98,7 @@ const Side = () => {
 				<li>
 					<StyledIcon
 						href="https://www.linkedin.com/in/trevorthomp/"
+						target="_blank"
 						title="LinkedIn"
 					>
 						<svg viewBox="0 0 512 512">
