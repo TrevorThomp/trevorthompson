@@ -32,7 +32,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
 	return (
 		<StyledFooter>
-			<p style={{ paddingBottom: "10px" }}>
+			<p style={{ paddingBottom: "25px", paddingTop: "25px" }}>
 				&copy; Copyright 2020 - Trevor Thompson
 			</p>
 		</StyledFooter>

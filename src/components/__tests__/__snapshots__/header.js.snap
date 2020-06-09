@@ -68,7 +68,7 @@ exports[`Header renders correctly 1`] = `
         </li>
         <a
           className="sc-AxhUy jmUJaJ"
-          href="trevorResume.pdf"
+          href="resume.pdf"
           rel="nofollow noopener noreferrer"
           target="_blank"
         >

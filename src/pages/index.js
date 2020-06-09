@@ -7,12 +7,12 @@ import {
 	About,
 	Experience,
 	Projects,
-	Nav,
-	Header,
 	Footer,
+	Side,
 } from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
+import Fade from "react-reveal/Fade";
 
 const StyledMain = styled.main`
 	padding: 0 250px;
@@ -43,6 +43,7 @@ const IndexPage = ({ location, data }) => {
 		<Layout>
 			<StyledMain>
 				<StyledSection>
+					<Side />
 					<Hero data={hero.edges} />
 					<About data={about.edges} />
 					<Experience data={experience.edges} />
