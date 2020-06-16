@@ -6,7 +6,7 @@ import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledProjectsWrapper = styled.div`
-	height: 80vh;
+	height: 120vh;
 	width: 1000px;
 
 	p {
@@ -114,6 +114,9 @@ const Projects = ({ data }) => {
 		projectTwoDesc,
 		projectTwoImg,
 		projectTwoTech,
+		projectThree,
+		projectThreeDesc,
+		projectThreeTech,
 	} = data[0].node.frontmatter;
 
 	const revealContainer = useRef(null);
@@ -143,6 +146,30 @@ const Projects = ({ data }) => {
 						}}
 						src={`sosBend.png`}
 					></img>
+				</StyledImageContainer>
+			</StyledProjectContainerWrapper>
+
+			<StyledProjectContainerWrapper>
+				<StyledProjectContainer>
+					<h3>{projectThree}</h3>
+					<p>{projectThreeDesc}</p>
+					<ul>
+						{projectThreeTech.map((item, i) => (
+							<li key={i}>{item}</li>
+						))}
+					</ul>
+				</StyledProjectContainer>
+				<StyledImageContainer>
+					{/* <img
+						style={{
+							padding: "10px",
+							width: "980px",
+							height: "225px",
+							borderRadius: `${borderRadius}`,
+							border: `1px solid ${secondColors.teal}`,
+						}}
+						src={`habitat.png`}
+					></img> */}
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 

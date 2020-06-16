@@ -6,7 +6,7 @@ import { socialLinks } from "../config";
 
 const SocialContainer = styled.div`
 	position: fixed;
-	right: 200px;
+	right: 60px;
 	bottom: 0px;
 
 	a:hover {

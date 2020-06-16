@@ -123,6 +123,9 @@ export const pageQuery = graphql`
 						projectTwo
 						projectTwoDesc
 						projectTwoTech
+						projectThree
+						projectThreeDesc
+						projectThreeTech
 					}
 				}
 			}
