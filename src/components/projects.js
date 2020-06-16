@@ -103,6 +103,9 @@ const StyledProjectContainerWrapper = styled.div`
 
 const StyledImageContainer = styled.div`
 	img {
+		position: relative;
+		borderradius: ${borderRadius};
+		border: 1px solid ${secondColors.teal};
 		opacity: 0.5;
 		transition: opacity 0.25s ease-in-out;
 		-moz-transition: opacity 0.25s ease-in-out;
@@ -160,8 +163,8 @@ const Projects = ({ data }) => {
 								padding: "10px",
 								width: "1200px",
 								height: "225px",
-								borderRadius: `${borderRadius}`,
-								border: `1px solid ${secondColors.teal}`,
+								// borderRadius: `${borderRadius}`,
+								// border: `1px solid ${secondColors.teal}`,
 							}}
 							src={`sosBend.png`}
 						></img>
@@ -186,8 +189,6 @@ const Projects = ({ data }) => {
 								padding: "10px",
 								width: "1415px",
 								height: "225px",
-								borderRadius: `${borderRadius}`,
-								border: `1px solid ${secondColors.teal}`,
 							}}
 							src={`habitat.png`}
 						></img>
@@ -212,8 +213,8 @@ const Projects = ({ data }) => {
 								padding: "10px",
 								width: "980px",
 								height: "225px",
-								borderRadius: `${borderRadius}`,
-								border: `1px solid ${secondColors.teal}`,
+								// borderRadius: `${borderRadius}`,
+								// border: `1px solid ${secondColors.teal}`,
 							}}
 							src={`jobBoard.png`}
 						></img>
