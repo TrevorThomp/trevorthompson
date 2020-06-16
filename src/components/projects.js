@@ -101,7 +101,19 @@ const StyledProjectContainerWrapper = styled.div`
 // 	}
 // `;
 
-const StyledImageContainer = styled.div``;
+const StyledImageContainer = styled.div`
+	img {
+		opacity: 0.5;
+		transition: opacity 0.25s ease-in-out;
+		-moz-transition: opacity 0.25s ease-in-out;
+		-webkit-transition: opacity 0.25s ease-in-out;
+	}
+
+	img:hover {
+		cursor: pointer;
+		opacity: 1 !important;
+	}
+`;
 
 const Projects = ({ data }) => {
 	const {
@@ -136,16 +148,23 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<img
-						style={{
-							padding: "10px",
-							width: "1200px",
-							height: "225px",
-							borderRadius: `${borderRadius}`,
-							border: `1px solid ${secondColors.teal}`,
-						}}
-						src={`sosBend.png`}
-					></img>
+					<a
+						// style={{ opacity: 0.3 }}
+						href="https://sosbend.com/"
+						target="_blank"
+					>
+						<img
+							style={{
+								padding: "10px",
+								width: "1200px",
+								height: "225px",
+								borderRadius: `${borderRadius}`,
+								border: `1px solid ${secondColors.teal}`,
+								opacity: 0.5,
+							}}
+							src={`sosBend.png`}
+						></img>
+					</a>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
@@ -160,16 +179,18 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<img
-						style={{
-							padding: "10px",
-							width: "1415px",
-							height: "225px",
-							borderRadius: `${borderRadius}`,
-							border: `1px solid ${secondColors.teal}`,
-						}}
-						src={`habitat.png`}
-					></img>
+					<a href="https://www.habitatlapinesunriver.org/" target="_blank">
+						<img
+							style={{
+								padding: "10px",
+								width: "1415px",
+								height: "225px",
+								borderRadius: `${borderRadius}`,
+								border: `1px solid ${secondColors.teal}`,
+							}}
+							src={`habitat.png`}
+						></img>
+					</a>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
@@ -184,16 +205,18 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<img
-						style={{
-							padding: "10px",
-							width: "980px",
-							height: "225px",
-							borderRadius: `${borderRadius}`,
-							border: `1px solid ${secondColors.teal}`,
-						}}
-						src={`jobBoard.png`}
-					></img>
+					<a href="https://trevorthomp.github.io/Can-U/" target="_blank">
+						<img
+							style={{
+								padding: "10px",
+								width: "980px",
+								height: "225px",
+								borderRadius: `${borderRadius}`,
+								border: `1px solid ${secondColors.teal}`,
+							}}
+							src={`jobBoard.png`}
+						></img>
+					</a>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>
