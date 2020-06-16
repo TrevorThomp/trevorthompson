@@ -2,7 +2,7 @@
 title: "Recent Projects"
 
 projectOne: "SOS Bend"
-projectOneDesc: "SOS Bend is a way to support the local businesses that you love and need in Bend. It allows you to continue to purchase from these businesses through store credits, providing them with much needed cash flow."
+projectOneDesc: "SOS Bend is a way to support the local businesses that you love and need in Bend. It allows you to continue to purchase from these businesses through store pledges, providing them with much needed cash flow."
 projectOneImg: "./sosBend.png"
 projectOneTech:
   - React (Context and Hooks)

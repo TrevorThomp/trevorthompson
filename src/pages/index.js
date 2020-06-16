@@ -97,15 +97,12 @@ export const pageQuery = graphql`
 				node {
 					frontmatter {
 						title
-						jobOne
-						jobOneTime
-						jobOneDescription
-						jobOneTech
-						jobTwoTitle
-						jobTwoTime
-						jobTwoDescription
+						company
+						location
+						date
+						url
+						description
 					}
-					html
 				}
 			}
 		}

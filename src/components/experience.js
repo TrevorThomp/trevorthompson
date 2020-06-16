@@ -54,10 +54,9 @@ const ExpWrapper = styled.div`
 `;
 
 const DetailBlockWrapper = styled.div`
-	// animation: ${Animations.fadeInUp} 0.2s;
 	transition: opacity 0.2s ease;
 	position: relative;
-	// display: ${(props) => (props.selected ? "flex" : "none")};
+	display: ${(props) => (props.selected ? "flex" : "none")};
 	flex-direction: column;
 	.position {
 		font-weight: bold;
@@ -130,7 +129,7 @@ const TitleBlockWrapper = styled.div`
 		text-transform: uppercase;
 		pointer-events: none;
 		color: ${secondColors.teal};
-		// font-weight: ${(props) => (props.selected ? "500" : "normal")};
+		font-weight: ${(props) => (props.selected ? "500" : "normal")};
 	}
 	.title {
 		display: flex;
@@ -162,94 +161,115 @@ const StyledTitle = styled.h2`
 	}
 `;
 
+const TitleDetailBlockWrapper = styled.div`
+	flex-direction: column;
+	.wrap {
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s ease;
+		max-height: ${(props) => (props.selected ? "800px" : "0")};
+		span {
+			// color: ${(props) => props.theme.colors.black};
+			text-transform: none;
+		}
+	}
+	.position-sm {
+		font-weight: bold;
+		margin-bottom: 1rem;
+		margin-top: 3rem;
+	}
+	.timeframe-sm {
+		font-style: italic;
+		margin-bottom: 1rem;
+	}
+	.details {
+		margin-bottom: 3rem;
+		ul {
+			list-style: none;
+			margin-top: 1rem;
+			li {
+				margin-bottom: 1rem;
+				position: relative;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&:before {
+					content: "";
+					position: absolute;
+					height: 8px;
+					width: 2px;
+					// background: ${(props) => props.theme.gradients.red};
+					top: 0.85rem;
+					left: -1.5rem;
+					z-index: 5;
+				}
+				&:after {
+					content: "";
+					position: absolute;
+					height: 8px;
+					width: 2px;
+					// background: ${(props) => props.theme.gradients.red};
+					top: 0.85rem;
+					left: -1.5rem;
+					z-index: 5;
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+`;
+
 const Experience = ({ data }) => {
+	console.log(data);
 	const [index, setIndex] = useState(0);
-	const {
-		title,
-		jobOne,
-		jobOneTime,
-		jobOneDescription,
-		jobOneTech,
-		jobTwoTitle,
-		jobTwoTime,
-		jobTwoDescription,
-	} = data[0].node.frontmatter;
 	const revealContainer = useRef(null);
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
 
-	// const handleLeftClick = (idx) => {
-	// 	let val = index === parseInt(idx) ? null : parseInt(idx);
-	// 	setIndex(val);
-	// };
-
-	const renderLeftBlocks = () => {
-		// return data.map((data, i) => {
-		// 	let {};
-		// });
-
-		return (
-			<TitleBlockWrapper>
-				<div className="title">
-					<span>{jobOne}</span>
-				</div>
-			</TitleBlockWrapper>
-		);
+	const handleLeftClick = (idx) => {
+		let val = index === parseInt(idx) ? null : parseInt(idx);
+		setIndex(val);
 	};
 
-	// const renderLeftBlocks = () => {
-	//   return blocks.map((block, idx) => {
-	//     let { company, detailsNode, position, timeframe } = block;
-	//     return (
-	//       <TitleBlockWrapper
-	//         selected={index === idx}
-	//         key={idx}
-	//         onClick={() => handleLeftClick(idx)}
-	//       >
-	//         <div className="title">
-	//           <span>{company}</span>
-	//           <Arrow selected={index === idx} />
-	//         </div>
-
-	//         <TitleDetailBlockWrapper selected={index === idx}>
-	//           <div className="wrap">
-	//             <div className="position-sm">
-	//               <span>{position}</span>
-	//             </div>
-	//             <div className="timeframe-sm">
-	//               <span>{timeframe}</span>
-	//             </div>
-	//             <div
-	//               className="details"
-	//               dangerouslySetInnerHTML={{
-	//                 __html: detailsNode.childMarkdownRemark.html,
-	//               }}
-	//             />
-	//           </div>
-	//         </TitleDetailBlockWrapper>
-	//       </TitleBlockWrapper>
-	//     );
-	//   });
-	// };
+	const renderLeftBlocks = () => {
+		return data.map(({ node }, idx) => {
+			let { company, title, date } = node.frontmatter;
+			return (
+				<TitleBlockWrapper
+					selected={index === idx}
+					key={idx}
+					onClick={() => handleLeftClick(idx)}
+				>
+					<div className="title">
+						<span>{company}</span>
+						{/* <Arrow selected={index === idx} /> */}
+					</div>
+				</TitleBlockWrapper>
+			);
+		});
+	};
 
 	const renderDetailBlocks = () => {
-		return (
-			<DetailBlockWrapper>
-				<div className="position">
-					<span>{jobOne}</span>
-				</div>
-				<div className="timeframe">
-					<span>{jobOneTime}</span>
-				</div>
+		return data.map(({ node }, idx) => {
+			let { company, date, description, title } = node.frontmatter;
+			return (
+				<DetailBlockWrapper selected={index === idx} key={idx}>
+					<div className="position">
+						<span>{title}</span>
+					</div>
+					<div className="timeframe">
+						<span>{date}</span>
+					</div>
 
-				<div className="details ">{jobOneDescription}</div>
-			</DetailBlockWrapper>
-		);
+					<div className="details ">{description}</div>
+				</DetailBlockWrapper>
+			);
+		});
 	};
 
 	return (
 		<ExpWrapper id="experience" ref={revealContainer}>
 			<section>
-				<StyledTitle>{title}</StyledTitle>
+				<StyledTitle>Experience</StyledTitle>
 				<div className="module">
 					<div className="left">{renderLeftBlocks()}</div>
 					<div className="right">{renderDetailBlocks()}</div>
