@@ -160,16 +160,16 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					{/* <img
+					<img
 						style={{
 							padding: "10px",
-							width: "980px",
+							width: "1415px",
 							height: "225px",
 							borderRadius: `${borderRadius}`,
 							border: `1px solid ${secondColors.teal}`,
 						}}
 						src={`habitat.png`}
-					></img> */}
+					></img>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
