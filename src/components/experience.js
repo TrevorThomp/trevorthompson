@@ -26,6 +26,7 @@ const ExpWrapper = styled.div`
         width: 22rem;
         padding-left: 0.2rem;
         flex-shrink: 0;
+        height: 100%;
         &:before {
           transition: all 0.2s ease;
           content: '';
