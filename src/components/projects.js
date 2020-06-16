@@ -113,6 +113,12 @@ const StyledImageContainer = styled.div`
 		cursor: pointer;
 		opacity: 1 !important;
 	}
+
+	@media (max-width: 728px) {
+		img {
+			opacity: 1;
+		}
+	}
 `;
 
 const Projects = ({ data }) => {
@@ -148,11 +154,7 @@ const Projects = ({ data }) => {
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<a
-						// style={{ opacity: 0.3 }}
-						href="https://sosbend.com/"
-						target="_blank"
-					>
+					<a href="https://sosbend.com/" target="_blank">
 						<img
 							style={{
 								padding: "10px",
@@ -160,7 +162,6 @@ const Projects = ({ data }) => {
 								height: "225px",
 								borderRadius: `${borderRadius}`,
 								border: `1px solid ${secondColors.teal}`,
-								opacity: 0.5,
 							}}
 							src={`sosBend.png`}
 						></img>
