@@ -42,7 +42,7 @@ const StyledProjectsWrapper = styled.div`
 	}
 
 	@media (max-width: 728px) {
-		height: 170vh;
+		height: 250vh;
 		width: 100%;
 	}
 `;
