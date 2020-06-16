@@ -88,23 +88,10 @@ const StyledProjectContainerWrapper = styled.div`
 	}
 `;
 
-// const StyledImage = styled.img`
-// 	max-width: 300px;
-// 	max-width: 100%;
-// 	border-radius: ${borderRadius};
-// 	border: 1px solid ${secondColors.teal};
-// 	padding: 10px;
-// 	margin-bottom: 50px;
-
-// 	@media (max-width: 728px) {
-// 		width: 325px;
-// 	}
-// `;
-
 const StyledImageContainer = styled.div`
 	img {
 		position: relative;
-		borderradius: ${borderRadius};
+		border-radius: ${borderRadius};
 		border: 1px solid ${secondColors.teal};
 		opacity: 0.5;
 		transition: opacity 0.25s ease-in-out;
@@ -130,10 +117,8 @@ const Projects = ({ data }) => {
 		projectOne,
 		projectOneDesc,
 		projectOneTech,
-		projectOneImg,
 		projectTwo,
 		projectTwoDesc,
-		projectTwoImg,
 		projectTwoTech,
 		projectThree,
 		projectThreeDesc,
@@ -159,12 +144,11 @@ const Projects = ({ data }) => {
 				<StyledImageContainer>
 					<a href="https://sosbend.com/" target="_blank">
 						<img
+							alt="Sos Bend landing page"
 							style={{
 								padding: "10px",
 								width: "1200px",
 								height: "225px",
-								// borderRadius: `${borderRadius}`,
-								// border: `1px solid ${secondColors.teal}`,
 							}}
 							src={`sosBend.png`}
 						></img>
@@ -185,6 +169,7 @@ const Projects = ({ data }) => {
 				<StyledImageContainer>
 					<a href="https://www.habitatlapinesunriver.org/" target="_blank">
 						<img
+							alt="habitat landing page"
 							style={{
 								padding: "10px",
 								width: "1415px",
@@ -209,12 +194,11 @@ const Projects = ({ data }) => {
 				<StyledImageContainer>
 					<a href="https://trevorthomp.github.io/Can-U/" target="_blank">
 						<img
+							alt="job board project landing page"
 							style={{
 								padding: "10px",
 								width: "980px",
 								height: "225px",
-								// borderRadius: `${borderRadius}`,
-								// border: `1px solid ${secondColors.teal}`,
 							}}
 							src={`jobBoard.png`}
 						></img>
