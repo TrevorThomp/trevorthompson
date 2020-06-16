@@ -42,14 +42,14 @@ const ExpWrapper = styled.div`
       .right {
         padding-left: 3.5rem;
       }
-      // @media screen and (max-width: ${(props) => props.theme.sizes.mobile}) {
-      //   .right {
-      //     display: none;
-      //   }
-      //   .left {
-      //     width: 100%;
-      //   }
-      // }
+      @media (max-width: 728px) {
+        .right {
+          display: none;
+        }
+        .left {
+          width: 100%;
+        }
+      }
     }
   }
 `;
@@ -162,6 +162,40 @@ const StyledTitle = styled.h2`
 	}
 `;
 
+const Arrow = styled.div`
+	height: 15px;
+	width: 15px;
+	position: relative;
+	margin-right: 15px;
+	&:before {
+		transition: all 0.2s ease;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: -5px;
+		width: 0.15rem;
+		height: 100%;
+		background: ${secondColors.teal};
+		z-index: 100;
+		transform: rotate(${(props) => (props.selected ? "45deg" : "-45deg")});
+	}
+	&:after {
+		transition: all 0.2s ease;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 5px;
+		width: 0.15rem;
+		height: 100%;
+		background: ${secondColors.teal};
+		z-index: 100;
+		transform: rotate(${(props) => (props.selected ? "-45deg" : "45deg")});
+	}
+	@media (min-width: 728px) {
+		display: none;
+	}
+`;
+
 const TitleDetailBlockWrapper = styled.div`
 	flex-direction: column;
 	.wrap {
@@ -170,7 +204,7 @@ const TitleDetailBlockWrapper = styled.div`
 		transition: all 0.3s ease;
 		max-height: ${(props) => (props.selected ? "800px" : "0")};
 		span {
-			// color: ${(props) => props.theme.colors.black};
+			color: ${secondColors.smokyBlack};
 			text-transform: none;
 		}
 	}
@@ -199,7 +233,7 @@ const TitleDetailBlockWrapper = styled.div`
 					position: absolute;
 					height: 8px;
 					width: 2px;
-					// background: ${(props) => props.theme.gradients.red};
+					background: ${secondColors.teal};
 					top: 0.85rem;
 					left: -1.5rem;
 					z-index: 5;
@@ -209,7 +243,7 @@ const TitleDetailBlockWrapper = styled.div`
 					position: absolute;
 					height: 8px;
 					width: 2px;
-					// background: ${(props) => props.theme.gradients.red};
+					background: ${secondColors.teal};
 					top: 0.85rem;
 					left: -1.5rem;
 					z-index: 5;
@@ -217,6 +251,9 @@ const TitleDetailBlockWrapper = styled.div`
 				}
 			}
 		}
+	}
+	@media (min-width: 728px) {
+		display: none;
 	}
 `;
 
@@ -233,7 +270,7 @@ const Experience = ({ data }) => {
 
 	const renderLeftBlocks = () => {
 		return data.map(({ node }, idx) => {
-			let { company, title, date } = node.frontmatter;
+			let { company, title, date, description } = node.frontmatter;
 			return (
 				<TitleBlockWrapper
 					selected={index === idx}
@@ -242,8 +279,22 @@ const Experience = ({ data }) => {
 				>
 					<div className="title">
 						<span>{company}</span>
-						{/* <Arrow selected={index === idx} /> */}
+						<Arrow selected={index === idx} />
 					</div>
+
+					<TitleDetailBlockWrapper selected={index === idx}>
+						<div className="wrap">
+							<div className="position-sm">
+								<span>{title}</span>
+							</div>
+							<div className="timeframe-sm">
+								<span>{date}</span>
+							</div>
+							<div className="details">
+								<span>{description}</span>
+							</div>
+						</div>
+					</TitleDetailBlockWrapper>
 				</TitleBlockWrapper>
 			);
 		});
