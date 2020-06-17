@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../styles";
 import { Link, animateScroll as scroll } from "react-scroll";
-const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+const { fontSizes, borderRadius, secondColors } = theme;
 
 const StyledNav = styled.nav`
 	display: flex;
@@ -87,6 +88,10 @@ const Nav = ({ navLinks }) => {
 			</StyledList>
 		</StyledNav>
 	);
+};
+
+Nav.propTypes = {
+	navLinks: PropTypes.array.isRequired,
 };
 
 export default Nav;

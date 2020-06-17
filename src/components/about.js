@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 import { theme } from "../styles";
-const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+const { fontSizes, secondColors, font } = theme;
 
 const StyledAboutWrapper = styled.div`
 	height: 90vh;
@@ -121,6 +122,10 @@ const About = ({ data }) => {
 			</StyledLanguageWrapper>
 		</StyledAboutWrapper>
 	);
+};
+
+About.propTypes = {
+	data: PropTypes.object.isRequired,
 };
 
 export default About;

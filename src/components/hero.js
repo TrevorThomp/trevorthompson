@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { theme } from "../styles";
-const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+const { fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledH2 = styled.h2`
 	color: ${secondColors.fadedTeal};
@@ -79,6 +80,10 @@ const Hero = ({ data }) => {
 			</StyledContainer>
 		</Fade>
 	);
+};
+
+Hero.propTypes = {
+	data: PropTypes.object.isRequired,
 };
 
 export default Hero;
