@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { theme } from "../styles";
-const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+const { secondColors } = theme;
 import { socialLinks } from "../config";
 
 const SocialContainer = styled.div`

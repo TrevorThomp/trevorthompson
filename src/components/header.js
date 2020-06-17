@@ -1,12 +1,11 @@
-// import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import { Nav } from "../index";
-import { navLinks } from "../../config";
+import { Nav } from "./";
+import { navLinks } from "../config";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { theme } from "../../styles";
+import { theme } from "../styles";
 import { useScrollYPosition } from "react-use-scroll-position";
 const { fontSizes, hamburgerStyles, secondColors, font, borderRadius } = theme;
 import { slide as Menu } from "react-burger-menu";

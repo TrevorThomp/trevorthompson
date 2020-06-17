@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { theme } from "../styles";
 import { Header } from "./";
-const { colors, secondColors } = theme;
+const { secondColors } = theme;
 
 const StyledContent = styled.div`
 	color: white;
@@ -39,7 +39,7 @@ const StyledContent = styled.div`
 
 import "./layout.css";
 
-const Layout = ({ location, children }) => {
+const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {

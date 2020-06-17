@@ -1,14 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { srConfig } from "../config";
 import { scrollReveal } from "../utils";
 import { theme } from "../styles";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { render } from "react-dom";
-const { colors, fontSizes, borderRadius, secondColors, font } = theme;
+const { secondColors, font } = theme;
 
 const ExpWrapper = styled.div`
-// height: 90vh;
   margin-bottom: 10rem;
   section {
     flex-direction: column;
@@ -258,7 +256,6 @@ const TitleDetailBlockWrapper = styled.div`
 `;
 
 const Experience = ({ data }) => {
-	console.log(data);
 	const [index, setIndex] = useState(0);
 	const revealContainer = useRef(null);
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
@@ -329,6 +326,10 @@ const Experience = ({ data }) => {
 			</section>
 		</ExpWrapper>
 	);
+};
+
+Experience.propTypes = {
+	data: PropTypes.object.isRequired,
 };
 
 export default Experience;
