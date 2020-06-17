@@ -10,5 +10,6 @@
 <p align="center">
   <a href="https://app.netlify.com/sites/reverent-einstein-630104/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/cca43bdc-3982-4eca-9e1f-92961365839d/deploy-status" alt="Netlify Status" />
+    <img src="https://travis-ci.org/TrevorThomp/trevorthompson.svg?branch=master" alt="Travis Status" />
   </a>
 </p>
