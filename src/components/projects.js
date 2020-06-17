@@ -6,7 +6,7 @@ import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledProjectsWrapper = styled.div`
-	height: 80vh;
+	height: 120vh;
 	width: 1000px;
 
 	p {
@@ -42,7 +42,7 @@ const StyledProjectsWrapper = styled.div`
 	}
 
 	@media (max-width: 728px) {
-		height: 170vh;
+		height: 250vh;
 		width: 100%;
 	}
 `;
@@ -88,20 +88,28 @@ const StyledProjectContainerWrapper = styled.div`
 	}
 `;
 
-// const StyledImage = styled.img`
-// 	max-width: 300px;
-// 	max-width: 100%;
-// 	border-radius: ${borderRadius};
-// 	border: 1px solid ${secondColors.teal};
-// 	padding: 10px;
-// 	margin-bottom: 50px;
+const StyledImageContainer = styled.div`
+	img {
+		position: relative;
+		border-radius: ${borderRadius};
+		border: 1px solid ${secondColors.teal};
+		opacity: 0.5;
+		transition: opacity 0.25s ease-in-out;
+		-moz-transition: opacity 0.25s ease-in-out;
+		-webkit-transition: opacity 0.25s ease-in-out;
+	}
 
-// 	@media (max-width: 728px) {
-// 		width: 325px;
-// 	}
-// `;
+	img:hover {
+		cursor: pointer;
+		opacity: 1 !important;
+	}
 
-const StyledImageContainer = styled.div``;
+	@media (max-width: 728px) {
+		img {
+			opacity: 1;
+		}
+	}
+`;
 
 const Projects = ({ data }) => {
 	const {
@@ -109,11 +117,12 @@ const Projects = ({ data }) => {
 		projectOne,
 		projectOneDesc,
 		projectOneTech,
-		projectOneImg,
 		projectTwo,
 		projectTwoDesc,
-		projectTwoImg,
 		projectTwoTech,
+		projectThree,
+		projectThreeDesc,
+		projectThreeTech,
 	} = data[0].node.frontmatter;
 
 	const revealContainer = useRef(null);
@@ -127,22 +136,48 @@ const Projects = ({ data }) => {
 					<h3>{projectOne}</h3>
 					<p>{projectOneDesc}</p>
 					<ul>
-						{projectOneTech.map((item) => (
-							<li>{item}</li>
+						{projectOneTech.map((item, i) => (
+							<li key={i}>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<img
-						style={{
-							padding: "10px",
-							width: "1200px",
-							height: "225px",
-							borderRadius: `${borderRadius}`,
-							border: `1px solid ${secondColors.teal}`,
-						}}
-						src={`sosBend.png`}
-					></img>
+					<a href="https://sosbend.com/" target="_blank">
+						<img
+							alt="Sos Bend landing page"
+							style={{
+								padding: "10px",
+								width: "1200px",
+								height: "225px",
+							}}
+							src={`sosBend.png`}
+						></img>
+					</a>
+				</StyledImageContainer>
+			</StyledProjectContainerWrapper>
+
+			<StyledProjectContainerWrapper>
+				<StyledProjectContainer>
+					<h3>{projectThree}</h3>
+					<p>{projectThreeDesc}</p>
+					<ul>
+						{projectThreeTech.map((item, i) => (
+							<li key={i}>{item}</li>
+						))}
+					</ul>
+				</StyledProjectContainer>
+				<StyledImageContainer>
+					<a href="https://www.habitatlapinesunriver.org/" target="_blank">
+						<img
+							alt="habitat landing page"
+							style={{
+								padding: "10px",
+								width: "1415px",
+								height: "225px",
+							}}
+							src={`habitat.png`}
+						></img>
+					</a>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
@@ -151,22 +186,23 @@ const Projects = ({ data }) => {
 					<h3>{projectTwo}</h3>
 					<p>{projectTwoDesc}</p>
 					<ul>
-						{projectTwoTech.map((item) => (
-							<li>{item}</li>
+						{projectTwoTech.map((item, i) => (
+							<li key={i}>{item}</li>
 						))}
 					</ul>
 				</StyledProjectContainer>
 				<StyledImageContainer>
-					<img
-						style={{
-							padding: "10px",
-							width: "980px",
-							height: "225px",
-							borderRadius: `${borderRadius}`,
-							border: `1px solid ${secondColors.teal}`,
-						}}
-						src={`jobBoard.png`}
-					></img>
+					<a href="https://trevorthomp.github.io/Can-U/" target="_blank">
+						<img
+							alt="job board project landing page"
+							style={{
+								padding: "10px",
+								width: "980px",
+								height: "225px",
+							}}
+							src={`jobBoard.png`}
+						></img>
+					</a>
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 		</StyledProjectsWrapper>

@@ -97,10 +97,12 @@ export const pageQuery = graphql`
 				node {
 					frontmatter {
 						title
-						paragraphOne
-						paragraphTwo
+						company
+						location
+						date
+						url
+						description
 					}
-					html
 				}
 			}
 		}
@@ -118,6 +120,9 @@ export const pageQuery = graphql`
 						projectTwo
 						projectTwoDesc
 						projectTwoTech
+						projectThree
+						projectThreeDesc
+						projectThreeTech
 					}
 				}
 			}
