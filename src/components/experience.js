@@ -204,7 +204,7 @@ const TitleDetailBlockWrapper = styled.div`
 		transition: all 0.3s ease;
 		max-height: ${(props) => (props.selected ? "800px" : "0")};
 		span {
-			color: ${secondColors.smokyBlack};
+			color: ${secondColors.slateWhite};
 			text-transform: none;
 		}
 	}
