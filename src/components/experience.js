@@ -256,6 +256,7 @@ const TitleDetailBlockWrapper = styled.div`
 `;
 
 const Experience = ({ data }) => {
+	console.log(data);
 	const [index, setIndex] = useState(0);
 	const revealContainer = useRef(null);
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
