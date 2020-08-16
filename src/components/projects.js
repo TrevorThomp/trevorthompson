@@ -117,9 +117,6 @@ const Projects = ({ data }) => {
 		projectOne,
 		projectOneDesc,
 		projectOneTech,
-		projectTwo,
-		projectTwoDesc,
-		projectTwoTech,
 		projectThree,
 		projectThreeDesc,
 		projectThreeTech,
@@ -181,30 +178,10 @@ const Projects = ({ data }) => {
 				</StyledImageContainer>
 			</StyledProjectContainerWrapper>
 
-			<StyledProjectContainerWrapper>
+			{/* <StyledProjectContainerWrapper>
 				<StyledProjectContainer>
-					<h3>{projectTwo}</h3>
-					<p>{projectTwoDesc}</p>
-					<ul>
-						{projectTwoTech.map((item, i) => (
-							<li key={i}>{item}</li>
-						))}
-					</ul>
-				</StyledProjectContainer>
-				<StyledImageContainer>
-					<a href="https://trevorthomp.github.io/Can-U/" target="_blank">
-						<img
-							alt="job board project landing page"
-							style={{
-								padding: "10px",
-								width: "980px",
-								height: "225px",
-							}}
-							src={`jobBoard.png`}
-						></img>
-					</a>
 				</StyledImageContainer>
-			</StyledProjectContainerWrapper>
+			</StyledProjectContainerWrapper> */}
 		</StyledProjectsWrapper>
 	);
 };

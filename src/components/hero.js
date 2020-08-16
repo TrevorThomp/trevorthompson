@@ -69,16 +69,16 @@ const StyledContainer = styled.section`
 const Hero = ({ data }) => {
 	const { title, name, description } = data[0].node.frontmatter;
 	return (
-		<Fade delay={2000} duration={2000} left>
-			<StyledContainer>
-				<StyledP>{title}</StyledP>
-				<StyledH2>{name}</StyledH2>
-				<StyledText>{description}</StyledText>
-				<StyledResumeButton href="mailto:trevor.ray.thompson@gmail.com">
-					Let's Connect
-				</StyledResumeButton>
-			</StyledContainer>
-		</Fade>
+		// <Fade delay={2000} duration={2000} left>
+		<StyledContainer>
+			<StyledP>{title}</StyledP>
+			<StyledH2>{name}</StyledH2>
+			<StyledText>{description}</StyledText>
+			<StyledResumeButton href="mailto:trevor.ray.thompson@gmail.com">
+				Let's Connect
+			</StyledResumeButton>
+		</StyledContainer>
+		// </Fade>
 	);
 };
 

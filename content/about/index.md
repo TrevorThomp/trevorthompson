@@ -6,12 +6,10 @@ paragraphTwo: "I enjoy developing anything that lives on the internet, whether t
 languageTitle: "Languages that I speak:"
 frontEnd:
   - JavaScript (ES6+)
-  - HTML & (S)CSS
   - React (Redux and Hooks)
-  - Vue
+  - HTML & (S)CSS
 backEnd:
-  - Node.js
-  - Ruby on Rails
-  - Python (Django)
-  - SQL / MongoDB
+  - .NET Framework/Core
+  - NodeJS
+  - SQL Server / MongoDB
 ---

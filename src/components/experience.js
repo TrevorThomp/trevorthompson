@@ -216,6 +216,7 @@ const TitleDetailBlockWrapper = styled.div`
 		margin-bottom: 1rem;
 	}
 	.details {
+		padding-left: 6px;
 		margin-bottom: 3rem;
 		ul {
 			list-style: none;
@@ -256,7 +257,6 @@ const TitleDetailBlockWrapper = styled.div`
 `;
 
 const Experience = ({ data }) => {
-	console.log(data);
 	const [index, setIndex] = useState(0);
 	const revealContainer = useRef(null);
 	useEffect(() => scrollReveal.reveal(revealContainer.current, srConfig()), []);
@@ -268,7 +268,8 @@ const Experience = ({ data }) => {
 
 	const renderLeftBlocks = () => {
 		return data.map(({ node }, idx) => {
-			let { company, title, date, description } = node.frontmatter;
+			let { company, title, date, descriptionOne } = node.frontmatter;
+			console.log(descriptionOne);
 			return (
 				<TitleBlockWrapper
 					selected={index === idx}
@@ -289,7 +290,12 @@ const Experience = ({ data }) => {
 								<span>{date}</span>
 							</div>
 							<div className="details">
-								<span>{description}</span>
+								{/* <span>{description}</span> */}
+								<ul>
+									{descriptionOne.map((item, i) => (
+										<li key={i}>{item}</li>
+									))}
+								</ul>
 							</div>
 						</div>
 					</TitleDetailBlockWrapper>
@@ -300,7 +306,7 @@ const Experience = ({ data }) => {
 
 	const renderDetailBlocks = () => {
 		return data.map(({ node }, idx) => {
-			let { company, date, description, title } = node.frontmatter;
+			let { company, date, descriptionOne, title } = node.frontmatter;
 			return (
 				<DetailBlockWrapper selected={index === idx} key={idx}>
 					<div className="position">
@@ -310,7 +316,13 @@ const Experience = ({ data }) => {
 						<span>{date}</span>
 					</div>
 
-					<div className="details ">{description}</div>
+					<div className="details ">
+						<ul>
+							{descriptionOne.map((item, i) => (
+								<li key={i}>{item}</li>
+							))}
+						</ul>
+					</div>
 				</DetailBlockWrapper>
 			);
 		});
