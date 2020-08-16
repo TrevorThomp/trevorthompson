@@ -12,7 +12,6 @@ import {
 } from "../components/";
 import { theme } from "../styles";
 const { colors, fontSizes } = theme;
-import Fade from "react-reveal/Fade";
 
 const StyledMain = styled.main`
 	padding: 0 250px;
@@ -92,6 +91,7 @@ export const pageQuery = graphql`
 
 		experience: allMarkdownRemark(
 			filter: { fileAbsolutePath: { regex: "/experience/" } }
+			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			edges {
 				node {
@@ -117,9 +117,6 @@ export const pageQuery = graphql`
 						projectOne
 						projectOneDesc
 						projectOneTech
-						projectTwo
-						projectTwoDesc
-						projectTwoTech
 						projectThree
 						projectThreeDesc
 						projectThreeTech
