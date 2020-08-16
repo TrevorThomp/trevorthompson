@@ -98,40 +98,40 @@ const Header = ({ siteTitle }) => {
 	return (
 		<StyledHeader>
 			<StyledScrolledHeader triggered={scrolled} />
-			<Fade right duration={2000} style={{ zIndex: 99 }}>
-				<div>
-					<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
-				</div>
+			{/* <Fade right duration={2000} style={{ zIndex: 99 }}> */}
+			<div>
+				<StyledLink onClick={scrollToTop}>{siteTitle}</StyledLink>
+			</div>
 
-				<Nav navLinks={navLinks} />
-			</Fade>
+			<Nav navLinks={navLinks} />
+			{/* </Fade> */}
 			<StyledOuterContainer>
-				<Fade right duration={2000} style={{ zIndex: 99 }}>
-					<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
-						{navLinks &&
-							navLinks.map(({ name, url }, i) => (
-								<Link
-									className="menu-item"
-									key={i}
-									to={url}
-									activeClass="active"
-									spy={true}
-									smooth={true}
-									offset={-70}
-									duration={500}
-								>
-									{name}
-								</Link>
-							))}
-						<StyledResumeButton
-							href="/resume.pdf"
-							target="_blank"
-							rel="nofollow noopener noreferrer"
-						>
-							Resume
-						</StyledResumeButton>
-					</Menu>
-				</Fade>
+				{/* <Fade right duration={2000} style={{ zIndex: 99 }}> */}
+				<Menu disableCloseOnEsc styles={hamburgerStyles} right width={200}>
+					{navLinks &&
+						navLinks.map(({ name, url }, i) => (
+							<Link
+								className="menu-item"
+								key={i}
+								to={url}
+								activeClass="active"
+								spy={true}
+								smooth={true}
+								offset={-70}
+								duration={500}
+							>
+								{name}
+							</Link>
+						))}
+					<StyledResumeButton
+						href="/resume.pdf"
+						target="_blank"
+						rel="nofollow noopener noreferrer"
+					>
+						Resume
+					</StyledResumeButton>
+				</Menu>
+				{/* </Fade> */}
 			</StyledOuterContainer>
 		</StyledHeader>
 	);
