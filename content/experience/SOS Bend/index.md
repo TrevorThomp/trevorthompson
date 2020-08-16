@@ -1,8 +1,13 @@
 ---
+
 title: "Software Engineer - Volunteer"
 company: "SOS Bend"
 location: "Bend, OR"
 date: "April - May 2020"
 url: "https://sosbend.com/"
-description: "SOS Bend is a way to support the local businesses that you love and need in Bend. It allows you to continue to purchase from these businesses through store pledges, providing them with much needed cash flow."
----
+descriptionOne:
+
+- Contributed software engineering expertise in the application through the software lifecycle, from the requirements to
+  the successful deployment.
+- Excelled in rapid application development and managed technological issues for assigned interfaces.
+- Implemented merchant registration and validation either through Google API, or form validation.

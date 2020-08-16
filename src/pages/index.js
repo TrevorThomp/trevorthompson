@@ -101,7 +101,7 @@ export const pageQuery = graphql`
 						location
 						date
 						url
-						description
+						descriptionOne
 					}
 				}
 			}
