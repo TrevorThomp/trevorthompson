@@ -125,7 +125,7 @@ const About = ({ data }) => {
 };
 
 About.propTypes = {
-	data: PropTypes.object.isRequired,
+	data: PropTypes.array.isRequired,
 };
 
 export default About;

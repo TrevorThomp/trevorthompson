@@ -269,7 +269,6 @@ const Experience = ({ data }) => {
 	const renderLeftBlocks = () => {
 		return data.map(({ node }, idx) => {
 			let { company, title, date, descriptionOne } = node.frontmatter;
-			console.log(descriptionOne);
 			return (
 				<TitleBlockWrapper
 					selected={index === idx}
@@ -342,7 +341,7 @@ const Experience = ({ data }) => {
 };
 
 Experience.propTypes = {
-	data: PropTypes.object.isRequired,
+	data: PropTypes.array.isRequired,
 };
 
 export default Experience;
