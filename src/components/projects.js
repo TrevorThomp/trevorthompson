@@ -6,7 +6,6 @@ import { scrollReveal } from "../utils";
 const { colors, fontSizes, borderRadius, secondColors, font } = theme;
 
 const StyledProjectsWrapper = styled.div`
-	height: 120vh;
 	width: 1000px;
 
 	p {
@@ -42,7 +41,6 @@ const StyledProjectsWrapper = styled.div`
 	}
 
 	@media (max-width: 728px) {
-		height: 250vh;
 		width: 100%;
 	}
 `;
