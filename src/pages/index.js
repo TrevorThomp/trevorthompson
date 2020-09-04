@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import {
 	Layout,
 	Hero,
@@ -39,18 +40,23 @@ const StyledSection = styled.section`
 const IndexPage = ({ location, data }) => {
 	const { hero, about, experience, projects } = data;
 	return (
-		<Layout>
-			<StyledMain>
-				<StyledSection>
-					<Side />
-					<Hero data={hero.edges} />
-					<About data={about.edges} />
-					<Experience data={experience.edges} />
-					<Projects data={projects.edges} />
-				</StyledSection>
-			</StyledMain>
-			<Footer />
-		</Layout>
+		<>
+			<Helmet>
+				<meta property="og:image" content="~/static/homeLandingPage.png" />
+			</Helmet>
+			<Layout>
+				<StyledMain>
+					<StyledSection>
+						<Side />
+						<Hero data={hero.edges} />
+						<About data={about.edges} />
+						<Experience data={experience.edges} />
+						<Projects data={projects.edges} />
+					</StyledSection>
+				</StyledMain>
+				<Footer />
+			</Layout>
+		</>
 	);
 };
 
