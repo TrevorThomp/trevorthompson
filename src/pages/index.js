@@ -42,7 +42,12 @@ const IndexPage = ({ location, data }) => {
 	return (
 		<>
 			<Helmet>
-				<meta property="og:image" content="~/static/homeLandingPage.png" />
+				<meta property="og:image" content="../../static/homeLandingPage.png" />
+				<meta property="og:title" content="Trevor's Portfolio Website" />
+				<meta
+					property="og:description"
+					content="Personal website with latest projects and contributions"
+				/>
 			</Helmet>
 			<Layout>
 				<StyledMain>
