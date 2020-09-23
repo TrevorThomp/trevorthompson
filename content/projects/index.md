@@ -7,7 +7,7 @@ projectOneDesc: "SOS Bend is a way to support the local businesses that you love
 projectOneImg: "./sosBend.png"
 projectOneTech:
 
-- React (Context and Hooks)
+- React
 - Redux
 - Styled Components
 - Next.js
